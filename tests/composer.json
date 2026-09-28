@@ -1,0 +1,18 @@
+{
+    "name": "dkexpress/dkexpress-for-woocommerce-tests",
+    "description": "PHPUnit test suite for DK Express Courier for WooCommerce",
+    "require-dev": {
+        "phpunit/phpunit": "^9.6",
+        "yoast/phpunit-polyfills": "^2.0"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DKExpress\\Tests\\": "./"
+        }
+    },
+    "scripts": {
+        "test": "phpunit --configuration phpunit.xml",
+        "test:unit":    "phpunit --configuration phpunit.xml --testsuite Unit",
+        "test:security": "phpunit --configuration phpunit.xml --testsuite Security"
+    }
+}

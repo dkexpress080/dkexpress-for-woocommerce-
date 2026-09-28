@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+    bootstrap="bootstrap.php"
+    backupGlobals="false"
+    colors="true"
+    convertErrorsToExceptions="true"
+    convertNoticesToExceptions="true"
+    convertWarningsToExceptions="true"
+    stopOnFailure="false"
+>
+    <testsuites>
+        <testsuite name="Unit">
+            <directory>Unit/</directory>
+        </testsuite>
+    </testsuites>
+
+    <php>
+        <!-- Override in local phpunit.xml.dist or env vars -->
+        <const name="ABSPATH" value="/Users/webexpert/htdocs/new/" />
+        <const name="DB_NAME" value="wordpress_test" />
+        <const name="DB_USER" value="root" />
+        <const name="DB_PASSWORD" value="root" />
+        <const name="DB_HOST" value="127.0.0.1:3306" />
+        <const name="WP_TESTS_DOMAIN" value="localhost" />
+        <const name="WP_TESTS_EMAIL" value="admin@localhost" />
+        <const name="WP_TESTS_TITLE" value="Test Blog" />
+        <const name="WP_PHP_BINARY" value="php" />
+        <const name="WOOCOMMERCE_ABSPATH" value="/Users/webexpert/htdocs/new/wp-content/plugins/woocommerce/" />
+    </php>
+
+    <filter>
+        <whitelist>
+            <directory suffix=".php">../</directory>
+            <exclude>
+                <directory>../includes/update/</directory>
+                <directory>../includes/PostTypes/</directory>
+                <directory>../tests/</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+</phpunit>

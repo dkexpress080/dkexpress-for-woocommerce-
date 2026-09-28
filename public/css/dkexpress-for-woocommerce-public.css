@@ -1,0 +1,40 @@
+#dkexpress-track-order-form [type="submit"] {
+    margin-top:10px;
+    display:inline-block;
+}
+
+.track-results-dkexpress ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.track-results-dkexpress ul li:nth-child(odd) {
+    background: #f5f5f5;
+}
+
+.track-results-dkexpress ul li {
+	padding: 10px 8px;
+}
+
+.track-results-dkexpress ul li .Status {
+display: inline-block;
+width: 58%;
+font-weight: 500;
+letter-spacing: .5px;
+
+}
+
+.track-results-dkexpress ul li .Status+.Shop {
+    width: 41%;
+}
+
+.track-results-dkexpress ul li .Shop {
+    color: #4a80d0;
+}
+.track-results-dkexpress ul li .Shop, .track-results-dkexpress ul li .StatusDate {
+    width: 20%;
+    text-align: right;
+    display: inline-block;
+    font-size: 13px;
+}

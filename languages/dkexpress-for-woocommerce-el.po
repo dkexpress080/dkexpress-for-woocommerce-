@@ -1,0 +1,898 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: DK Express for WooCommerce\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-23 21:24+0300\n"
+"PO-Revision-Date: 2026-05-05 16:18+0300\n"
+"Last-Translator: Dimitrios Selimidis <ds@webexpert.gr>\n"
+"Language-Team: Dimitrios Selimidis <ds@webexpert.gr>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: dkexpress-for-woocommerce.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:211
+msgid "Popup blocked by your browser."
+msgstr "Το αναδυόμενο παράθυρο αποκλείστηκε από τον περιηγητή σας."
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:212
+msgid "Click here to open"
+msgstr "Κάντε κλικ εδώ για να ανοίξετε"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:213
+msgid "The voucher could not be printed."
+msgstr "Δεν ήταν δυνατή η εκτύπωση του voucher."
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:224
+#: admin/class-dkexpress-for-woocommerce-admin.php:604
+msgid "Status"
+msgstr "Κατάσταση"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:239
+msgctxt "post type general name"
+msgid "Jobs"
+msgstr "Εργασίες"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:240
+msgctxt "post type singular name"
+msgid "Job"
+msgstr "Εργασία"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:241
+msgctxt "admin menu"
+msgid "Jobs"
+msgstr "Εργασίες"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:242
+msgctxt "add new on admin bar"
+msgid "Jobs"
+msgstr "Εργασίες"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:243
+msgctxt "book"
+msgid "Add New"
+msgstr "Προσθήκη νέας"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:244
+msgid "Add New Job"
+msgstr "Προσθήκη νέας εργασίας"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:245
+msgid "New Job"
+msgstr "Νέα εργασία"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:246
+msgid "Edit Job"
+msgstr "Επεξεργασία εργασίας"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:247
+msgid "View Job"
+msgstr "Προβολή εργασίας"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:248
+msgid "All Jobs"
+msgstr "Όλες οι εργασίες"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:249
+msgid "Search Jobs"
+msgstr "Αναζήτηση εργασιών"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:250
+msgid "Parent Jobs:"
+msgstr "Γονικές εργασίες:"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:251
+msgid "No jobs found."
+msgstr "Δεν βρέθηκαν εργασίες."
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:252
+msgid "No jobs found in Trash."
+msgstr "Δεν βρέθηκαν εργασίες στον Κάδο."
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:257
+msgid "Job"
+msgstr "Εργασία"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:258
+msgid "Jobs"
+msgstr "Εργασίες"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:279
+msgid "Title"
+msgstr "Τίτλος"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:280
+msgid "Job Status"
+msgstr "Κατάσταση εργασίας"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:281
+msgid "Carrier"
+msgstr "Μεταφορέας"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:282
+#: admin/class-dkexpress-for-woocommerce-admin.php:608
+msgid "Track & Trace"
+msgstr "Κατάσταση αποστολής"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:283
+msgid "Print"
+msgstr "Εκτύπωση"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:284
+msgid "Actions"
+msgstr "Ενέργειες"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:301
+#, php-format
+msgid "Account %d"
+msgstr "Λογαριασμός %d"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:329
+#: admin/class-dkexpress-for-woocommerce-admin.php:706
+#: admin/class-dkexpress-for-woocommerce-admin.php:1724
+msgid "A4"
+msgstr "A4"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:330
+msgid "100x150"
+msgstr "100x150"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:339
+#: admin/class-dkexpress-for-woocommerce-admin.php:728
+msgid "Voucher has been cancelled"
+msgstr "Το voucher έχει ακυρωθεί"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:339
+#: admin/class-dkexpress-for-woocommerce-admin.php:728
+msgid "The voucher could not be cancelled."
+msgstr "Δεν ήταν δυνατή η ακύρωση του voucher."
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:339
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:360
+msgid "Opened"
+msgstr "Ανοιχτή"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:363
+msgid "Cancelled"
+msgstr "Ακυρωμένη"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:366
+msgid "Closed"
+msgstr "Ολοκληρωμένη"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:369
+msgid "Not initialized"
+msgstr "Δεν έχει αρχικοποιηθεί"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:435
+#: admin/class-dkexpress-for-woocommerce-admin.php:535
+#: admin/class-dkexpress-for-woocommerce-admin.php:1487
+#: admin/class-dkexpress-for-woocommerce-admin.php:1584
+msgid "DK Express"
+msgstr "DK Express"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:463
+#: admin/class-dkexpress-for-woocommerce-admin.php:707
+#: admin/class-dkexpress-for-woocommerce-admin.php:1725
+msgid "Clean"
+msgstr "Clean"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:464
+#: admin/class-dkexpress-for-woocommerce-admin.php:708
+#: admin/class-dkexpress-for-woocommerce-admin.php:1726
+msgid "Single PDF"
+msgstr "Single PDF"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:465
+#: admin/class-dkexpress-for-woocommerce-admin.php:709
+#: admin/class-dkexpress-for-woocommerce-admin.php:1727
+msgid "Single Clean"
+msgstr "Single Clean"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:466
+#: admin/class-dkexpress-for-woocommerce-admin.php:710
+#: admin/class-dkexpress-for-woocommerce-admin.php:1728
+msgid "Single 100x150"
+msgstr "Single 100x150"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:467
+#: admin/class-dkexpress-for-woocommerce-admin.php:711
+#: admin/class-dkexpress-for-woocommerce-admin.php:1729
+msgid "Clean 100x150"
+msgstr "Clean 100x150"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:468
+#: admin/class-dkexpress-for-woocommerce-admin.php:712
+#: admin/class-dkexpress-for-woocommerce-admin.php:1730
+msgid "Single 100x170"
+msgstr "Single 100x170"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:469
+#: admin/class-dkexpress-for-woocommerce-admin.php:713
+#: admin/class-dkexpress-for-woocommerce-admin.php:1731
+msgid "Clean 100x170"
+msgstr "Clean 100x170"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:512
+#: includes/class-wx-courier-metabox-ux.php:960
+msgid "Return voucher"
+msgstr "Voucher επιστροφής"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:513
+#: includes/class-wx-courier-metabox-ux.php:812
+msgid "Prepaid return label"
+msgstr "Προπληρωμένο voucher επιστροφής"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:513
+msgid "A return AWB is issued together with the voucher"
+msgstr "Το voucher επιστροφής εκδίδεται μαζί με το voucher αποστολής"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:514
+msgid "Return labels are issued together with the outbound voucher."
+msgstr "Τα voucher επιστροφής εκδίδονται μαζί με το voucher αποστολής."
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:519
+#: admin/class-dkexpress-for-woocommerce-admin.php:877
+#: includes/class-wx-courier-metabox-ux.php:1128
+#: includes/class-wx-courier-metabox-ux.php:1267
+msgid "No label returned."
+msgstr "Δεν επιστράφηκε ετικέτα."
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:589
+#: admin/class-dkexpress-for-woocommerce-admin.php:1686
+#: includes/class-wx-courier-metabox-ux.php:880
+msgid "Voucher"
+msgstr "Voucher"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:597
+msgid "Sub Voucher"
+msgstr "Υπο vouchers"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:617
+#: includes/class-wx-courier-metabox-ux.php:616
+msgid "Parcels"
+msgstr "Δέματα"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:626
+msgid "Weight (in kg)"
+msgstr "Βάρος (σε kg)"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:647
+msgid "Cash on delivery price"
+msgstr "Τιμή Αντικαταβολής"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:658
+#: includes/class-wx-courier-metabox-ux.php:826
+msgid "Comments"
+msgstr "Σχόλια"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:679
+msgid "Select your account"
+msgstr "Επιλέξτε λογαριασμό"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:693
+msgid "There was an error issuing the voucher."
+msgstr "Παρουσιάστηκε σφάλμα κατά την έκδοση του voucher."
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:693
+msgid "Vouchers have been created!"
+msgstr "Το voucher έχει δημιουργηθεί!"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:693
+#: includes/class-wx-courier-metabox-ux.php:858
+msgid "Create voucher"
+msgstr "Δημιουργία voucher"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:700
+msgid "Print type"
+msgstr "Τύπος εκτύπωσης"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:722
+#: includes/class-wx-courier-metabox-ux.php:997
+msgid "Print voucher"
+msgstr "Εκτύπωση voucher"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:729
+#: includes/class-wx-courier-metabox-ux.php:937
+msgid "Cancel voucher"
+msgstr "Ακύρωση voucher"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:751
+msgid "Date From"
+msgstr "Από"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:751
+msgid "Date To"
+msgstr "Μέχρι"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:793
+msgid "Print jobs (DK Express)"
+msgstr "Εκτύπωση εργασιών (DK Express)"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:794
+msgid "Cancel jobs (DK Express)"
+msgstr "Ακύρωση εργασιών (DK Express)"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:795
+msgid "Delete jobs"
+msgstr "Διαγραφή εργασιών"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:802
+msgid "Selected jobs were cancelled"
+msgstr "Οι επιλεγμένες εργασίες έχουν ακυρωθεί"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:808
+msgid "No vouchers were selected for print"
+msgstr "Δεν επιλέχθηκαν voucher προς εκτύπωση"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:814
+msgid "DK Express could not cancel some vouchers:"
+msgstr "Η DK Express δεν μπόρεσε να ακυρώσει ορισμένα vouchers:"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:819
+msgid "DK Express could not print the selected vouchers."
+msgstr "Η DK Express δεν μπόρεσε να εκτυπώσει τα επιλεγμένα vouchers."
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:824
+msgid ""
+"You should select jobs that have been created by the same DK Express account"
+msgstr ""
+"Πρέπει να επιλέξετε εργασίες που έχουν δημιουργηθεί από τον ίδιο λογαριασμό "
+"DK Express"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:908
+#: admin/class-dkexpress-for-woocommerce-admin.php:936
+#: admin/class-dkexpress-for-woocommerce-admin.php:1181
+msgid "Insufficient permissions."
+msgstr "Δεν έχετε επαρκή δικαιώματα."
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:915
+msgid "This order has no DK Express voucher."
+msgstr "Η παραγγελία δεν έχει voucher DK Express."
+
+#. translators: %s: voucher number
+#: admin/class-dkexpress-for-woocommerce-admin.php:1029
+#, php-format
+msgid "This order already has voucher %s. Cancel it first to issue a new one."
+msgstr ""
+"Η παραγγελία έχει ήδη το voucher %s. Ακυρώστε το πρώτα για να εκδώσετε νέο."
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1134
+msgid "DK Express did not return a shipment number."
+msgstr "Η DK Express δεν επέστρεψε αριθμό αποστολής."
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1139
+msgid "Job for order"
+msgstr "Εργασία για την παραγγελία"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1518
+msgid "Tracking"
+msgstr "Κατάσταση αποστολής"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1532
+#: admin/class-dkexpress-for-woocommerce-admin.php:1614
+msgid "Settings"
+msgstr "Ρυθμίσεις"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1578
+#: includes/class-wx-courier-metabox-ux.php:254
+#: includes/class-wx-courier-metabox-ux.php:418
+msgid "Delivered"
+msgstr "Παραδόθηκε"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1613
+msgid "Accounts"
+msgstr "Λογαριασμοί"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1618
+msgid "Tools"
+msgstr "Εργαλεία"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1651
+msgid "Account ID:"
+msgstr "Λογαριασμός:"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1654
+msgid "Username"
+msgstr "Όνομα χρήστη"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1658
+msgid "Password"
+msgstr "Κωδικός πρόσβασης"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1662
+msgid "API"
+msgstr "API key"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1666
+msgid "Customer code"
+msgstr "Κωδικός πελάτη"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1670
+msgid "Basic service code"
+msgstr "Κωδικός βασικής υπηρεσίας"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1677
+msgid "Add extra account"
+msgstr "(+) Προσθήκη νέου λογαριασμού"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1689
+msgid "Auto issue"
+msgstr "Αυτόματη έκδοση"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1692
+msgid "Auto issue voucher upon order completion"
+msgstr "Αυτόματη έκδοση voucher κατά την ολοκλήρωση της παραγγελίας"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1695
+msgid "Improved UX"
+msgstr "Improved UX"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1698
+msgid "Use the new voucher box on the order page"
+msgstr "Χρήση του νέου πλαισίου voucher στη σελίδα παραγγελίας"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1702
+msgid "Default DK Express account"
+msgstr "Προκαθορισμένος λογαριασμός DK Express"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1720
+msgid "Default print size"
+msgstr "Προκαθορισμένο μέγεθος εκτύπωσης"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1736
+msgid "Default weight (kg)"
+msgstr "Προκαθορισμένο βάρος (kg)"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1740
+msgid "Default weight per item (kg)"
+msgstr "Προκαθορισμένο βάρος ανά δέμα (kg)"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1747
+msgid "Shipping"
+msgstr "Αποστολή"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1750
+msgid "Disable volumetric"
+msgstr "Απενεργοποίηση υπολογισμού ογκομετρικού βάρους"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1753
+msgid "Disable volumetric weight calculation"
+msgstr "Απενεργοποίηση υπολογισμού ογκομετρικού βάρους βάσει διαστάσεων"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1756
+msgid "Disable on specific Payment Gateways"
+msgstr "Απενεργοποίηση έκδοσης σε συγκεκριμένους μεθόδους πληρωμής"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1771
+msgid "Disable on specific Shipping Methods"
+msgstr "Απενεργοποίηση έκδοσης σε επιλεγμένες συγκεκριμένους αποστολής"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1806
+msgid "Advanced"
+msgstr "Προηγμένες ρυθμίσεις"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1809
+msgid "Debug"
+msgstr "Αποσφαλμάτωση"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1812
+msgid "Debug mode logs every request made"
+msgstr ""
+"Η λειτουργία εντοπισμού σφαλμάτων καταγράφει κάθε αίτημα που υποβάλλεται "
+"προς την DK Express"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1826
+#: admin/class-dkexpress-for-woocommerce-admin.php:1833
+msgid "Export Orders"
+msgstr "Εξαγωγή παραγγελιών"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1830
+msgid "Export"
+msgstr "Εξαγωγή"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1835
+msgid ""
+"Please install Web Expert WooCommerce Order Tracking in order to enable "
+"exporter."
+msgstr ""
+"Εγκαταστήστε το πρόσθετο Web Expert WooCommerce Order Tracking ώστε να "
+"ενεργοποιηθεί η εξαγωγή."
+
+#: includes/class-wx-courier-metabox-ux.php:257
+#: includes/class-wx-courier-metabox-ux.php:414
+msgid "Not delivered"
+msgstr "Δεν παραδόθηκε"
+
+#: includes/class-wx-courier-metabox-ux.php:260
+msgid "Returned"
+msgstr "Επιστράφηκε"
+
+#: includes/class-wx-courier-metabox-ux.php:263
+#: includes/class-wx-courier-metabox-ux.php:411
+msgid "Out for delivery"
+msgstr "Προς παράδοση"
+
+#: includes/class-wx-courier-metabox-ux.php:266
+#: includes/class-wx-courier-metabox-ux.php:410
+msgid "In transit"
+msgstr "Σε μεταφορά"
+
+#: includes/class-wx-courier-metabox-ux.php:268
+#: includes/class-wx-courier-metabox-ux.php:408
+msgid "Issued"
+msgstr "Εκδόθηκε"
+
+#: includes/class-wx-courier-metabox-ux.php:270
+msgid "Not issued"
+msgstr "Δεν έχει εκδοθεί"
+
+#: includes/class-wx-courier-metabox-ux.php:409
+msgid "Picked up"
+msgstr "Παραλήφθηκε"
+
+#: includes/class-wx-courier-metabox-ux.php:416
+msgid "Returned to sender"
+msgstr "Επιστροφή στον αποστολέα"
+
+#. translators: %s: courier name
+#: includes/class-wx-courier-metabox-ux.php:546
+#, php-format
+msgid "Not used for this order. Shipped with %s."
+msgstr "Δεν χρησιμοποιείται σε αυτή την παραγγελία. Αποστολή με %s."
+
+#: includes/class-wx-courier-metabox-ux.php:568
+msgid "License required"
+msgstr "Απαιτείται άδεια χρήσης"
+
+#: includes/class-wx-courier-metabox-ux.php:569
+msgid "Activate your license to use this feature."
+msgstr ""
+"Ενεργοποιήστε την άδεια χρήσης σας για να ξεκλειδώσετε αυτή την καρτέλα."
+
+#: includes/class-wx-courier-metabox-ux.php:570
+msgid "Activate"
+msgstr "Ενεργοποίηση"
+
+#. translators: 1: voucher number 2: date/time
+#: includes/class-wx-courier-metabox-ux.php:600
+#, php-format
+msgid "Voucher %1$s cancelled %2$s. Details below were kept."
+msgstr "Το voucher %1$s ακυρώθηκε %2$s. Τα παρακάτω στοιχεία διατηρήθηκαν."
+
+#: includes/class-wx-courier-metabox-ux.php:604
+msgid "Dismiss"
+msgstr "Κλείσιμο"
+
+#: includes/class-wx-courier-metabox-ux.php:633
+msgid "saved"
+msgstr "αποθηκευμένο"
+
+#: includes/class-wx-courier-metabox-ux.php:638
+msgid "auto from products"
+msgstr "αυτόματα από τα προϊόντα"
+
+#: includes/class-wx-courier-metabox-ux.php:641
+msgid "default"
+msgstr "προεπιλογή"
+
+#: includes/class-wx-courier-metabox-ux.php:646
+msgid "Weight"
+msgstr "Βάρος"
+
+#: includes/class-wx-courier-metabox-ux.php:667
+msgid "Pickup date"
+msgstr "Ημερομηνία παραλαβής"
+
+#: includes/class-wx-courier-metabox-ux.php:667
+msgid "moved to today"
+msgstr "μεταφέρθηκε σε σήμερα"
+
+#: includes/class-wx-courier-metabox-ux.php:686
+msgid "Cash on delivery"
+msgstr "Αντικαταβολή"
+
+#: includes/class-wx-courier-metabox-ux.php:737
+msgid "Services"
+msgstr "Υπηρεσίες"
+
+#: includes/class-wx-courier-metabox-ux.php:746
+#: includes/class-wx-courier-metabox-ux.php:939
+msgid "More"
+msgstr "Περισσότερα"
+
+#: includes/class-wx-courier-metabox-ux.php:770
+msgid "Insurance amount"
+msgstr "Ποσό ασφάλισης"
+
+#: includes/class-wx-courier-metabox-ux.php:826
+msgid "from customer note"
+msgstr "από τη σημείωση πελάτη"
+
+#: includes/class-wx-courier-metabox-ux.php:826
+#, php-format
+msgid "max %d chars"
+msgstr "έως %d χαρακτήρες"
+
+#: includes/class-wx-courier-metabox-ux.php:843
+msgid "Account"
+msgstr "Λογαριασμός"
+
+#: includes/class-wx-courier-metabox-ux.php:872
+msgid "Not delivered."
+msgstr "Δεν παραδόθηκε."
+
+#: includes/class-wx-courier-metabox-ux.php:872
+msgid ""
+"The courier will retry or return the parcel. Check the last event below."
+msgstr ""
+"Η courier θα επαναλάβει την παράδοση ή θα επιστρέψει το δέμα. Δείτε το "
+"τελευταίο συμβάν παρακάτω."
+
+#: includes/class-wx-courier-metabox-ux.php:874
+msgid "Returned to sender."
+msgstr "Επιστράφηκε στον αποστολέα."
+
+#: includes/class-wx-courier-metabox-ux.php:883
+#: includes/class-wx-courier-metabox-ux.php:966
+msgid "Copy"
+msgstr "Αντιγραφή"
+
+#: includes/class-wx-courier-metabox-ux.php:884
+msgid "Track on courier site"
+msgstr "Παρακολούθηση στο site της courier"
+
+#: includes/class-wx-courier-metabox-ux.php:889
+#, php-format
+msgid "%d sub-voucher"
+msgid_plural "%d sub-vouchers"
+msgstr[0] "%d επιμέρους voucher"
+msgstr[1] "%d επιμέρους vouchers"
+
+#: includes/class-wx-courier-metabox-ux.php:910
+#, php-format
+msgid "updated %s"
+msgstr "ενημερώθηκε %s"
+
+#: includes/class-wx-courier-metabox-ux.php:910
+msgid "tracking stopped"
+msgstr "η παρακολούθηση σταμάτησε"
+
+#: includes/class-wx-courier-metabox-ux.php:911
+#: includes/class-wx-courier-metabox-ux.php:916
+msgid "refresh"
+msgstr "ανανέωση"
+
+#: includes/class-wx-courier-metabox-ux.php:912
+#: includes/class-wx-courier-metabox-ux.php:917
+#, php-format
+msgid "all %d events"
+msgid_plural "all %d events"
+msgstr[0] "όλα τα %d συμβάντα"
+msgstr[1] "όλα τα %d συμβάντα"
+
+#: includes/class-wx-courier-metabox-ux.php:914
+msgid "No courier scans yet."
+msgstr "Δεν υπάρχουν ακόμη σαρώσεις από την courier."
+
+#: includes/class-wx-courier-metabox-ux.php:915
+#, php-format
+msgid "checked %s"
+msgstr "έλεγχος %s"
+
+#: includes/class-wx-courier-metabox-ux.php:915
+msgid "waiting for the first tracking check"
+msgstr "αναμονή για τον πρώτο έλεγχο παρακολούθησης"
+
+#: includes/class-wx-courier-metabox-ux.php:941
+msgid "Reset job (local only)"
+msgstr "Επαναφορά εργασίας (μόνο τοπικά)"
+
+#: includes/class-wx-courier-metabox-ux.php:968
+msgid "Print return label"
+msgstr "Εκτύπωση voucher επιστροφής"
+
+#: includes/class-wx-courier-metabox-ux.php:977
+msgid "Issue return voucher"
+msgstr "Έκδοση voucher επιστροφής"
+
+#: includes/class-wx-courier-metabox-ux.php:997
+#, php-format
+msgid "Print %s"
+msgstr "Εκτύπωση %s"
+
+#: includes/class-wx-courier-metabox-ux.php:1022
+#, php-format
+msgid "%d parcel"
+msgid_plural "%d parcels"
+msgstr[0] "%d δέμα"
+msgstr[1] "%d δέματα"
+
+#: includes/class-wx-courier-metabox-ux.php:1034
+#, php-format
+msgid "pickup %s"
+msgstr "παραλαβή %s"
+
+#: includes/class-wx-courier-metabox-ux.php:1040
+#, php-format
+msgid "COD %s"
+msgstr "Αντικαταβολή %s"
+
+#: includes/class-wx-courier-metabox-ux.php:1055
+msgid "Details:"
+msgstr "Λεπτομέρειες:"
+
+#: includes/class-wx-courier-metabox-ux.php:1055
+msgid "Details"
+msgstr "Λεπτομέρειες"
+
+#: includes/class-wx-courier-metabox-ux.php:1078
+msgid "just now"
+msgstr "μόλις τώρα"
+
+#. translators: %s: human time diff (core string, translated by WordPress)
+#: includes/class-wx-courier-metabox-ux.php:1082
+#, php-format
+msgid "%s ago"
+msgstr "πριν από %s"
+
+#: includes/class-wx-courier-metabox-ux.php:1117
+msgid "Voucher created."
+msgstr "Το voucher δημιουργήθηκε."
+
+#: includes/class-wx-courier-metabox-ux.php:1118
+#: includes/class-wx-courier-metabox-ux.php:1491
+msgid "Voucher cancelled."
+msgstr "Το voucher ακυρώθηκε."
+
+#: includes/class-wx-courier-metabox-ux.php:1119
+msgid "Job reset. The voucher, if any, still exists at the courier."
+msgstr ""
+"Η εργασία επαναφέρθηκε. Το voucher, αν υπάρχει, παραμένει ενεργό στην "
+"courier."
+
+#: includes/class-wx-courier-metabox-ux.php:1120
+#, php-format
+msgid "Cancel voucher %s at the courier? The label becomes invalid."
+msgstr "Να ακυρωθεί το voucher %s στην courier; Η ετικέτα παύει να ισχύει."
+
+#: includes/class-wx-courier-metabox-ux.php:1121
+msgid "Reset the voucher process for this order? This only clears local data."
+msgstr ""
+"Να γίνει επαναφορά της διαδικασίας voucher για αυτή την παραγγελία; "
+"Διαγράφονται μόνο τα τοπικά δεδομένα."
+
+#: includes/class-wx-courier-metabox-ux.php:1122
+msgid "Label opened in a new tab."
+msgstr "Η ετικέτα άνοιξε σε νέα καρτέλα."
+
+#: includes/class-wx-courier-metabox-ux.php:1123
+msgid "Your browser blocked the label window."
+msgstr "Ο browser απέκλεισε το παράθυρο της ετικέτας."
+
+#: includes/class-wx-courier-metabox-ux.php:1124
+msgid "Open label"
+msgstr "Άνοιγμα ετικέτας"
+
+#: includes/class-wx-courier-metabox-ux.php:1125
+msgid "Something went wrong."
+msgstr "Κάτι πήγε στραβά."
+
+#: includes/class-wx-courier-metabox-ux.php:1126
+#: includes/class-wx-courier-metabox-ux.php:1181
+msgid "License required."
+msgstr "Απαιτείται άδεια χρήσης."
+
+#: includes/class-wx-courier-metabox-ux.php:1127
+msgid "Copied"
+msgstr "Αντιγράφηκε"
+
+#: includes/class-wx-courier-metabox-ux.php:1129
+#: includes/class-wx-courier-metabox-ux.php:1218
+msgid "Tracking refreshed."
+msgstr "Η παρακολούθηση ανανεώθηκε."
+
+#: includes/class-wx-courier-metabox-ux.php:1130
+msgid ""
+"Issue a return voucher at the courier for this order? The customer sends the "
+"parcel back with it."
+msgstr ""
+"Να εκδοθεί voucher επιστροφής στην courier για αυτή την παραγγελία; Ο "
+"πελάτης στέλνει το δέμα πίσω με αυτό."
+
+#: includes/class-wx-courier-metabox-ux.php:1131
+#: includes/class-wx-courier-metabox-ux.php:1248
+msgid "Return voucher issued."
+msgstr "Το voucher επιστροφής εκδόθηκε."
+
+#: includes/class-wx-courier-metabox-ux.php:1178
+msgid "You do not have permission to perform this action."
+msgstr "Δεν έχετε δικαίωμα να εκτελέσετε αυτή την ενέργεια."
+
+#: includes/class-wx-courier-metabox-ux.php:1185
+msgid "Order not found."
+msgstr "Η παραγγελία δεν βρέθηκε."
+
+#: includes/class-wx-courier-metabox-ux.php:1210
+msgid "Tracking is not available."
+msgstr "Η παρακολούθηση δεν είναι διαθέσιμη."
+
+#: includes/class-wx-courier-metabox-ux.php:1228
+msgid "This courier has no return voucher call."
+msgstr "Η courier δεν διαθέτει κλήση έκδοσης voucher επιστροφής."
+
+#: includes/class-wx-courier-metabox-ux.php:1232
+msgid "Issue the outbound voucher first."
+msgstr "Εκδώστε πρώτα το voucher αποστολής."
+
+#: includes/class-wx-courier-metabox-ux.php:1235
+msgid "A return voucher already exists for this order."
+msgstr "Υπάρχει ήδη voucher επιστροφής για αυτή την παραγγελία."
+
+#: includes/class-wx-courier-metabox-ux.php:1243
+msgid "The courier returned no return voucher number."
+msgstr "Η courier δεν επέστρεψε αριθμό voucher επιστροφής."
+
+#: includes/class-wx-courier-metabox-ux.php:1247
+#, php-format
+msgid "%1$s return voucher %2$s issued."
+msgstr "%1$s: εκδόθηκε το voucher επιστροφής %2$s."
+
+#: includes/class-wx-courier-metabox-ux.php:1255
+msgid "Printing the return label is not available."
+msgstr "Η εκτύπωση του voucher επιστροφής δεν είναι διαθέσιμη."
+
+#: includes/class-wx-courier-metabox-ux.php:1260
+msgid "No return voucher on this order."
+msgstr "Δεν υπάρχει voucher επιστροφής σε αυτή την παραγγελία."
+
+#: includes/class-wx-courier-metabox-ux.php:1461
+msgid "Cancel is not available."
+msgstr "Η ακύρωση δεν είναι διαθέσιμη."
+
+#: includes/class-wx-courier-metabox-ux.php:1477
+msgid "The courier refused the cancellation."
+msgstr "Η courier απέρριψε την ακύρωση."
+
+#: includes/class-wx-courier-metabox-ux.php:1489
+#, php-format
+msgid "%1$s voucher %2$s cancelled."
+msgstr "%1$s: το voucher %2$s ακυρώθηκε."
+
+#: includes/class-wx-courier-metabox-ux.php:1502
+#, php-format
+msgid "%1$s job reset locally. Voucher %2$s was not cancelled at the courier."
+msgstr ""
+"%1$s: η εργασία επαναφέρθηκε τοπικά. Το voucher %2$s δεν ακυρώθηκε στην "
+"courier."
+
+#: includes/class-wx-courier-metabox-ux.php:1504
+msgid "Job reset."
+msgstr "Η εργασία επαναφέρθηκε."
+
+#: includes/class-wx-courier-metabox-ux.php:1518
+#, php-format
+msgid "%1$s voucher %2$s issued."
+msgstr "%1$s: εκδόθηκε το voucher %2$s."
+
+#: public/class-dkexpress-for-woocommerce-public.php:43
+msgid "Voucher number"
+msgstr "Αριθμός voucher"
+
+#: public/class-dkexpress-for-woocommerce-public.php:45
+msgid "Track"
+msgstr "Αναζήτηση"

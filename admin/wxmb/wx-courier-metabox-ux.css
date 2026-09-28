@@ -1,0 +1,164 @@
+/* WebExpert courier plugins — Improved UX order metabox (shared, v1). */
+
+/* Header: logo + status chip inside the postbox title */
+.wxmb-head[hidden] { display: none !important; }
+.postbox .hndle .wxmb-title { display: inline-flex; align-items: center; gap: 8px; min-width: 0; }
+.postbox .hndle .wxmb-logo { height: 18px; width: auto; max-width: 110px; vertical-align: middle; }
+.postbox .hndle .wxmb-title.has-logo .wxmb-title-text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.postbox .hndle .wxmb-chip,
+.wxmb-chip { display: inline-flex; align-items: center; margin-left: 8px; padding: 2px 8px; border-radius: 10px; font-size: 10px; font-weight: 600; line-height: 1.6; letter-spacing: .02em; text-transform: uppercase; white-space: nowrap; background: #e5e5e5; color: #646970; }
+.wxmb-chip.is-live { background: #edfaef; color: #0a7a1e; }
+.wxmb-chip.is-done { background: #e8f0fe; color: #1a4d8f; }
+.wxmb-chip.is-bad  { background: #fde8e8; color: #b32d2e; }
+.wxmb-chip.is-hidden, .wxmb-chip:empty { display: none; }
+.postbox-header .hndle .wxmb-chip { margin-left: auto; margin-right: 6px; }
+
+/* Container */
+.wxmb { position: relative; font-size: 13px; color: #1d2327; }
+.wxmb *, .wxmb *::before, .wxmb *::after { box-sizing: border-box; }
+.wxmb-group { padding: 12px; background: #f9fafb; border: 1px solid #e0e0e0; border-radius: 4px; }
+.wxmb-group + .wxmb-group { margin-top: 12px; }
+.wxmb-group.wxmb-info { padding: 0; background: #fff; overflow: hidden; }
+.wxmb-quiet-line { margin: 0; color: #646970; font-size: 12px; }
+.wxmb-quiet-line b { color: #1d2327; font-weight: 600; }
+
+/* Fields */
+.wxmb-field { margin: 0 0 12px; }
+.wxmb-field:last-child { margin-bottom: 0; }
+.wxmb-field > label { display: block; margin: 0 0 4px; font-size: 13px; font-weight: normal; color: #50575e; }
+.wxmb-field > label small { color: #8c8f94; font-size: 11px; }
+.wxmb-field input[type="text"],
+.wxmb-field input[type="number"],
+.wxmb-field input[type="date"],
+.wxmb-field select,
+.wxmb-field textarea { width: 100%; margin: 0; padding: 6px 10px; font-size: 13px; line-height: 1.5; border: 1px solid #d0d5dd; border-radius: 4px; background: #fff; color: #2c3338; box-shadow: none; }
+.wxmb-field input:focus, .wxmb-field select:focus, .wxmb-field textarea:focus { border-color: #0073aa; box-shadow: 0 0 0 1px #0073aa; outline: none; }
+.wxmb-field textarea { min-height: 60px; resize: vertical; }
+.wxmb-field-inline { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.wxmb-field-inline > label { margin: 0; }
+.wxmb-input-unit { position: relative; display: block; }
+.wxmb-input-unit input { padding-right: 36px !important; }
+.wxmb-unit { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 12px; color: #8c8f94; pointer-events: none; }
+.wxmb-stepper { display: inline-flex; align-items: stretch; height: 30px; border: 1px solid #d0d5dd; border-radius: 4px; background: #fff; overflow: hidden; }
+.wxmb-stepper .wxmb-step { width: 28px; border: 0; background: #f6f7f7; color: #50575e; font-size: 15px; line-height: 1; cursor: pointer; padding: 0; }
+.wxmb-stepper .wxmb-step:hover { background: #eef0f2; color: #1d2327; }
+.wxmb-stepper input[type="number"] { width: 44px !important; padding: 0 4px !important; border: 0 !important; border-left: 1px solid #d0d5dd !important; border-right: 1px solid #d0d5dd !important; border-radius: 0 !important; text-align: center; -moz-appearance: textfield; box-shadow: none !important; }
+.wxmb-stepper input[type="number"]::-webkit-outer-spin-button, .wxmb-stepper input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.wxmb-check { display: flex !important; gap: 8px; align-items: flex-start; cursor: pointer; color: #2c3338 !important; }
+.wxmb-check input { margin: 2px 0 0 !important; }
+.wxmb-check small { display: block; color: #8c8f94; font-size: 11px; }
+.wxmb-hidden-select[hidden] { display: none !important; }
+
+/* Chips */
+.wxmb-chips { display: flex; flex-wrap: wrap; gap: 5px; }
+.wxmb-chips-more { display: contents; }
+.wxmb-chips-more[hidden] { display: none; }
+.wxmb-chip-btn { font: inherit; font-size: 12px; line-height: 1.4; padding: 3px 9px; border: 1px solid #d0d5dd; border-radius: 4px; background: #fff; color: #2c3338; cursor: pointer; }
+.wxmb-chip-btn:hover { border-color: #8c8f94; }
+.wxmb-chip-btn.on { background: #e7f0fa; border-color: #2271b1; color: #0a4b78; }
+.wxmb-chip-btn.lock { background: #f0f0f1; border-color: #dcdcde; color: #8c8f94; cursor: default; }
+.wxmb-chip-btn.wxmb-more { color: #50575e; }
+.wxmb-chip-btn.wxmb-more.open { background: #f0f0f1; }
+.wxmb-chip-btn:focus-visible { outline: 2px solid #2271b1; outline-offset: 1px; }
+
+/* Actions — WooCommerce paints .button-primary teal on its admin screens; keep WP blue here. */
+.wxmb .button-primary, .wxmb .button-primary:hover, .wxmb .button-primary:focus { background: #2271b1; border-color: #2271b1; color: #fff; text-shadow: none; box-shadow: none; }
+.wxmb .button-primary:hover { background: #135e96; border-color: #135e96; }
+.wxmb-actions { margin-top: 12px; }
+.wxmb-info + .wxmb-group .wxmb-actions { margin-top: 0; }
+.wxmb-actions .wxmb-btn { width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 6px; position: relative; }
+.wxmb-split { display: flex; width: 100%; position: relative; }
+.wxmb-split .wxmb-btn { flex: 1; border-top-right-radius: 0; border-bottom-right-radius: 0; }
+.wxmb-split .wxmb-caret { flex: 0 0 32px; padding: 0 !important; border-top-left-radius: 0; border-bottom-left-radius: 0; margin-left: -1px; }
+.wxmb-menu { position: absolute; right: 0; top: calc(100% + 4px); z-index: 20; min-width: 160px; padding: 4px 0; background: #fff; border: 1px solid #c3c4c7; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,.12); }
+.wxmb-menu[hidden] { display: none; }
+.wxmb-menu a { display: block; padding: 6px 12px; font-size: 12.5px; color: #1d2327; text-decoration: none; }
+.wxmb-menu a:hover { background: #f0f6fc; color: #0a4b78; }
+.wxmb-menu a.wxmb-reset { color: #b32d2e; }
+.wxmb-spin { display: none; width: 14px; height: 14px; border: 2px solid rgba(255,255,255,.5); border-top-color: #fff; border-radius: 50%; animation: wxmb-spin .7s linear infinite; }
+.wxmb-btn.button:not(.button-primary) .wxmb-spin { border-color: rgba(34,113,177,.35); border-top-color: #2271b1; }
+.wxmb-btn.is-busy { pointer-events: none; opacity: .8; }
+.wxmb-btn.is-busy .wxmb-spin { display: inline-block; }
+@keyframes wxmb-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .wxmb-spin { animation: none; } }
+
+/* Issued: rows */
+.wxmb-row { display: flex; align-items: baseline; gap: 8px; padding: 8px 12px; border-bottom: 1px solid #eee; }
+.wxmb-row-label { flex: 0 0 auto; min-width: 64px; font-weight: 600; color: #50575e; }
+.wxmb-row-value { flex: 1; min-width: 0; word-break: break-word; display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+.wxmb-voucher { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 14px; font-weight: 500; letter-spacing: 0; color: #1d2327; }
+.wxmb-voucher-row .wxmb-row-label { min-width: 0; }
+.wxmb-voucher-row .wxmb-row-value { flex-wrap: nowrap; }
+.wxmb-voucher-row .wxmb-voucher { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.wxmb-subs { font-size: 12px; color: #50575e; }
+.wxmb-ico { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border: 1px solid #d0d5dd; border-radius: 3px; background: #fff; color: #50575e; cursor: pointer; text-decoration: none; padding: 0; }
+.wxmb-ico .dashicons { font-size: 14px; width: 14px; height: 14px; }
+.wxmb-ico:hover { color: #0a4b78; border-color: #2271b1; }
+.wxmb-ico.is-copied { color: #0a7a1e; border-color: #0a7a1e; }
+
+/* Rail */
+.wxmb-rail { padding: 10px 12px 4px; }
+.wxmb-r { display: grid; grid-template-columns: 14px 1fr auto; column-gap: 8px; align-items: center; min-height: 22px; position: relative; font-size: 12px; color: #8c8f94; }
+.wxmb-dot { width: 10px; height: 10px; border-radius: 50%; border: 2px solid #c3c4c7; background: #fff; margin-left: 2px; position: relative; z-index: 1; }
+.wxmb-line { position: absolute; left: 6px; top: 14px; bottom: -8px; width: 2px; background: #e0e0e0; }
+.wxmb-r:last-child .wxmb-line { display: none; }
+.wxmb-r-time { font-size: 11px; font-variant-numeric: tabular-nums; }
+.wxmb-r.done { color: #1d2327; }
+.wxmb-r.done .wxmb-dot { background: #0a7a1e; border-color: #0a7a1e; }
+.wxmb-r.done .wxmb-line { background: #0a7a1e; }
+.wxmb-r.cur { color: #1d2327; font-weight: 600; }
+.wxmb-r.cur .wxmb-dot { border-color: #2271b1; box-shadow: 0 0 0 3px #e7f0fa; }
+.wxmb-r.bad { color: #b32d2e; font-weight: 600; }
+.wxmb-r.bad .wxmb-dot { background: #b32d2e; border-color: #b32d2e; }
+.wxmb-last { padding: 4px 12px 10px; font-size: 12px; color: #50575e; }
+.wxmb-last small { display: block; margin-top: 1px; font-size: 11px; color: #8c8f94; }
+.wxmb-last a { color: #2271b1; text-decoration: none; }
+.wxmb-muted { color: #8c8f94; }
+.wxmb-events { margin: 0; padding: 6px 12px 10px; border-top: 1px solid #eee; list-style: none; font-size: 11.5px; max-height: 220px; overflow: auto; }
+.wxmb-events[hidden] { display: none; }
+.wxmb-events li { display: grid; grid-template-columns: 74px 1fr; gap: 8px; padding: 2px 0; color: #50575e; }
+.wxmb-events li em { color: #8c8f94; font-style: normal; }
+.wxmb-events li.wxmb-ev-noise { color: #a7aaad; }
+.wxmb-ev-time { font-variant-numeric: tabular-nums; color: #8c8f94; white-space: nowrap; }
+
+/* Details + footer line under print */
+.wxmb-details { margin-top: 10px; font-size: 12px; color: #646970; line-height: 1.45; }
+.wxmb-foot { display: flex; justify-content: flex-end; align-items: center; gap: 8px; margin-top: 8px; font-size: 12px; }
+.wxmb-foot-right { display: inline-flex; align-items: center; gap: 10px; position: relative; }
+.wxmb-danger-link { color: #b32d2e; text-decoration: none; white-space: nowrap; }
+.wxmb-danger-link:hover { text-decoration: underline; color: #a10b0d; }
+.wxmb-more-wrap { position: relative; }
+.wxmb-kebab { width: 24px; height: 24px; padding: 0; border: 1px solid #d0d5dd; border-radius: 3px; background: #fff; color: #50575e; cursor: pointer; font-size: 14px; line-height: 1; }
+.wxmb-kebab:hover { border-color: #8c8f94; color: #1d2327; }
+
+/* Notices */
+.wxmb-notices:empty { display: none; }
+/* Bootstrap-style filled alerts: tinted background, matching 1px border all round, dark tonal text. */
+.wxmb-notice { display: flex; justify-content: space-between; gap: 8px; align-items: flex-start; margin: 0 0 10px; padding: 8px 10px; font-size: 12px; line-height: 1.45; border: 1px solid #b6effb; border-radius: 4px; color: #055160; background: #cff4fc; }
+.wxmb-notice-ok { color: #0f5132; background: #d1e7dd; border-color: #badbcc; }
+.wxmb-notice-err { color: #842029; background: #f8d7da; border-color: #f5c2c7; }
+.wxmb-notice-warn { color: #664d03; background: #fff3cd; border-color: #ffecb5; }
+.wxmb-notice a { color: inherit; font-weight: 600; text-decoration: underline; }
+.wxmb-notice a:hover, .wxmb-notice a:focus { color: inherit; opacity: .8; }
+.wxmb-x { flex: 0 0 auto; border: 0; background: none; color: inherit; opacity: .55; cursor: pointer; font-size: 14px; line-height: 1; padding: 0; }
+.wxmb-x:hover { color: inherit; opacity: 1; }
+
+/* License lock (mirrors the plugins' own overlay so this file is self-sufficient) */
+.wxmb.webexpert-mb-locked-wrap { min-height: 80px; }
+.wxmb.webexpert-mb-locked-wrap.is-locked > *:not(.webexpert-mb-lock-overlay) { opacity: .3; pointer-events: none; user-select: none; }
+.wxmb .webexpert-mb-lock-overlay { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(255,255,255,.78); z-index: 10; text-align: center; padding: 16px 12px; }
+.wxmb .webexpert-mb-lock-overlay .dashicons-lock { font-size: 26px; width: 26px; height: 26px; color: #d4a017; }
+.wxmb .webexpert-mb-lock-overlay strong { font-size: 13px; }
+.wxmb .webexpert-mb-lock-overlay p { font-size: 11px; color: #646970; margin: 0 0 8px; }
+.wxmb .webexpert-mb-lock-overlay .button-primary { background: #0073aa; border-color: #0073aa; color: #fff; border-radius: 4px; }
+
+/* Quiet box: one line, no reserved height */
+.wxmb.wxmb-quiet, .postbox .inside > .wxmb.webexpert-mb-locked-wrap[data-state="quiet"] { min-height: 0; }
+
+/* Return voucher row */
+.wxmb-return { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-top: 10px; padding-top: 10px; border-top: 1px dashed #e0e0e0; font-size: 12px; }
+.wxmb-return-label { color: #50575e; font-weight: 600; }
+.wxmb-return-no { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; color: #1d2327; }
+.wxmb-return .button-small { margin-left: auto; }
+.wxmb-return .wxmb-btn-inline { width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 6px; }
+.wxmb-return-note { color: #8c8f94; font-size: 11.5px; }

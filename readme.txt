@@ -1,0 +1,50 @@
+=== DK Express for WooCommerce ===
+Contributors: dkexpress, webexpert
+Tags: woocommerce, dk express, courier, voucher, shipping
+Requires at least: 5.8
+Tested up to: 6.9.4
+WC tested up to: 10.7.0
+Requires PHP: 7.4
+Stable tag: 1.0.0
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+
+Έκδοση, εκτύπωση, ακύρωση και παρακολούθηση vouchers DK Express μέσα από το WooCommerce.
+
+== Description ==
+
+Το επίσημο πρόσθετο της DK Express για WooCommerce. Συνδέεται απευθείας με το API της DK Express και σας επιτρέπει να διαχειρίζεστε τις αποστολές σας από τη σελίδα της παραγγελίας.
+
+**Κύρια χαρακτηριστικά:**
+
+* Έκδοση και εκτύπωση voucher από τη σελίδα της παραγγελίας
+* Μαζική εκτύπωση vouchers από τη λίστα εργασιών
+* Αυτόματη έκδοση voucher όταν η παραγγελία ολοκληρώνεται
+* Ακύρωση voucher
+* Αντικαταβολή
+* Πολλαπλά δέματα ανά παραγγελία
+* Αποστολές σε Ελλάδα και Κύπρο
+* Πολλαπλοί λογαριασμοί DK Express, με επιλογή λογαριασμού ανά παραγγελία
+* Αυτόματη παρακολούθηση της αποστολής και σήμανση των παραδομένων παραγγελιών
+* Υπολογισμός ογκομετρικού βάρους από τις διαστάσεις των προϊόντων
+* Μεγέθη εκτύπωσης A4, 100x150 και 100x170
+* Shortcodes παρακολούθησης για τον πελάτη
+* Συμβατότητα με HPOS και WooCommerce Order Fulfillments
+
+== Installation ==
+
+1. Ανεβάστε το αρχείο zip από Πρόσθετα → Προσθήκη νέου → Μεταφόρτωση πρόσθετου και ενεργοποιήστε το.
+2. Ανοίξτε WooCommerce → DK Express.
+3. Στην καρτέλα Λογαριασμοί συμπληρώστε τα στοιχεία API που σας έδωσε η DK Express (Username, Password, API key). Ο κωδικός πελάτη και ο κωδικός βασικής υπηρεσίας είναι προαιρετικοί.
+4. Στην καρτέλα Ρυθμίσεις ορίστε το προεπιλεγμένο βάρος και μέγεθος εκτύπωσης.
+
+== Shortcodes ==
+
+* `[dkexpress_track_form]` — φόρμα αναζήτησης αποστολής
+* `[dkexpress_track_status order_id="123"]` — τρέχουσα κατάσταση αποστολής
+* `[dkexpress_track_checkpoints order_id="123"]` — ιστορικό σταδίων αποστολής
+
+== Changelog ==
+
+= 1.0.0 =
+* Πρώτη έκδοση

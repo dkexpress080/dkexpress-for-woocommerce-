@@ -1,0 +1,724 @@
+/**
+ * DK Express Voucher for WooCommerce - Admin CSS
+ */
+
+/* ── Settings page layout ────────────────────────── */
+.dkexpress-settings-wrap {
+	max-width: 960px;
+}
+
+.dkexpress-settings-wrap > h1 {
+	font-size: 21px;
+	font-weight: 400;
+	margin-bottom: 16px;
+	padding: 0;
+}
+
+/* ── Tab navigation ──────────────────────────────── */
+.dkexpress-settings-wrap .nav-tab-wrapper {
+	border-bottom: 1px solid #ccd0d4;
+	margin: 0 0 0;
+	padding: 0;
+}
+
+.dkexpress-settings-wrap .nav-tab {
+	background: transparent;
+	border: none;
+	border-bottom: 3px solid transparent;
+	color: #646970;
+	font-size: 13px;
+	font-weight: 500;
+	padding: 10px 16px;
+	margin: 0 4px -1px 0;
+	transition: color .15s, border-color .15s;
+}
+
+.dkexpress-settings-wrap .nav-tab:hover {
+	background: transparent;
+	border-bottom-color: #a7aaad;
+	color: #1d2327;
+}
+
+.dkexpress-settings-wrap .nav-tab-active,
+.dkexpress-settings-wrap .nav-tab-active:hover,
+.dkexpress-settings-wrap .nav-tab-active:focus {
+	background: transparent;
+	border-bottom-color: #0073aa;
+	color: #1d2327;
+	box-shadow: none;
+}
+
+/* ── Tab content area ────────────────────────────── */
+.dkexpress-tab-content {
+	padding-top: 20px;
+}
+
+/* ── Sections (card-style) ───────────────────────── */
+.dkexpress-section {
+	background: #fff;
+	border: 1px solid #e0e0e0;
+	border-radius: 6px;
+	padding: 0;
+	margin-bottom: 16px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
+}
+
+.dkexpress-section-title {
+	font-size: 14px;
+	font-weight: 600;
+	color: #1d2327;
+	text-transform: uppercase;
+	letter-spacing: .02em;
+	margin: 0;
+	padding: 16px;
+	background: #fafafa;
+	border-bottom: 1px solid #f0f0f0;
+	border-radius: 6px 6px 0 0;
+}
+
+.dkexpress-section .form-table {
+	margin: 0;
+	padding: 0 20px;
+}
+
+.dkexpress-section .form-table th {
+	color: #1d2327;
+	font-weight: 600;
+	font-size: 13px;
+	padding: 16px;
+	width: 220px;
+	vertical-align: middle;
+}
+
+.dkexpress-section .form-table td {
+	padding: 16px;
+}
+
+.dkexpress-section .form-table tr {
+	border-bottom: 1px solid #f0f0f1;
+}
+
+.dkexpress-section .form-table tr:last-child {
+	border-bottom: none;
+}
+
+@media screen and (max-width: 782px) {
+    .dkexpress-section .form-table td {
+        padding: 16px;
+    }
+    .dkexpress-section .form-table th {
+        width: auto;
+        padding-bottom: 4px;
+	vertical-align: middle;
+	color: #1d2327;
+	font-weight: 600;
+	font-size: 13px;
+}
+}
+
+/* ── Global input styling within settings ────────── */
+.dkexpress-settings-wrap select[multiple] {
+	min-width: 300px;
+	min-height: 80px;
+}
+
+/* ── Radio & checkbox styling ────────────────────── */
+/* ── Submit button styling ───────────────────────── */
+.dkexpress-tab-content .submit {
+	padding: 16px 0 0;
+	margin: 0;
+}
+
+.dkexpress-tab-content .submit .button-primary {
+	background: #0073aa;
+	border-color: #0073aa;
+	border-radius: 4px;
+	box-shadow: none;
+	font-size: 13px;
+	font-weight: 500;
+	padding: 6px 20px;
+	height: auto;
+	line-height: 1.5;
+	transition: background .15s;
+}
+
+.dkexpress-tab-content .submit .button-primary:hover {
+	background: #005d8c;
+	border-color: #005d8c;
+}
+
+/* ── License badge on tab ────────────────────────── */
+/* ── License status banner ───────────────────────── */
+.dkexpress-license-status {
+	padding: 12px 16px;
+	border-radius: 4px;
+	margin: 16px 16px 2px 16px;
+	font-size: 13px;
+	font-weight: 500;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.dkexpress-license-status .dashicons {
+	font-size: 18px;
+	width: 18px;
+	height: 18px;
+}
+
+.dkexpress-license-active {
+	background: #edfaef;
+	color: #0a7a1e;
+	border: 1px solid #b8e6be;
+}
+
+.dkexpress-license-inactive {
+	background: #fcf0f1;
+	color: #a10b0d;
+	border: 1px solid #f0b8b8;
+}
+
+/* ── Account repeater cards ──────────────────────── */
+.dkexpress-account-table {
+	background: #fff;
+	padding: 0 24px 16px;
+	border: 1px solid #e0e0e0;
+	border-radius: 6px;
+	margin-bottom: 12px;
+	position: relative;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
+	transition: border-color .15s, box-shadow .15s;
+}
+
+.dkexpress-account-table table {
+	margin-top: 0;
+}
+
+.dkexpress-account-table .form-table th {
+	color: #1d2327;
+	font-weight: 600;
+	font-size: 13px;
+	width: 180px;
+	vertical-align: middle;
+}
+
+.dkexpress-account-table .account_id {
+	font-size: 11px !important;
+	text-transform: uppercase;
+	letter-spacing: .05em;
+	color: #0073aa;
+	font-weight: 600;
+	background: #f0f6fc;
+	padding: 6px 12px;
+	border-radius: 3px;
+	margin: 16px 0 0;
+}
+
+.dkexpress-account-delete {
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	font-size: 0;
+	cursor: pointer;
+	width: 24px;
+	height: 24px;
+	line-height: 22px;
+	text-align: center;
+	border-radius: 3px;
+	color: #d63638;
+	border: 1px solid transparent;
+	transition: background .15s, border-color .15s;
+}
+
+.dkexpress-account-delete::before {
+	content: '\00d7';
+	font-size: 20px;
+}
+
+.dkexpress-account-delete:hover {
+	background: #fcf0f1;
+	border-color: #d63638;
+}
+
+.webexpert-add-extra-dkexpress-acc.button.button-primary {
+	background: #0073aa;
+	border-color: #0073aa;
+	border-radius: 4px;
+	box-shadow: none;
+	font-size: 13px;
+	font-weight: 500;
+	padding: 6px 16px;
+	height: auto;
+	line-height: 1.5;
+	margin-top: 4px;
+}
+
+.webexpert-add-extra-dkexpress-acc.button.button-primary:hover {
+	background: #005d8c;
+	border-color: #005d8c;
+}
+
+/* ── Tools tab: content inside sections ──────────── */
+#tab-tools .dkexpress-section .form-table th {
+	color: #1d2327;
+	font-weight: 600;
+	font-size: 13px;
+	width: 160px;
+	vertical-align: middle;
+}
+
+/* ── Date filter inputs ──────────────────────────── */
+input[name="mishaDateFrom"], input[name="mishaDateTo"] {
+	line-height: 29px;
+	height: 29px;
+	margin: 0;
+}
+
+/* ── Job status badges ───────────────────────────── */
+.webexpert-job-status {
+	display: inline-flex;
+	padding: 3px 12px;
+	color: #777;
+	background: #e5e5e5;
+	border-radius: 10px;
+	white-space: nowrap;
+	max-width: 100%;
+	font-size: 11px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: .02em;
+}
+
+.webexpert-job-status.we-voucher-open {
+	background: #edfaef;
+	color: #0a7a1e;
+}
+
+.webexpert-job-status.we-voucher-closed {
+	background: #e8f0fe;
+	color: #1a4d8f;
+}
+
+.webexpert-job-status.we-voucher-cancelled {
+	color: #6b7280;
+	background: #f0f0f1;
+}
+
+/* ── Metabox field layout ────────────────────────── */
+.webexpert-field {
+	position: relative;
+	margin: 12px 0;
+}
+
+.webexpert-field:first-child {
+	margin-top: 0;
+}
+
+.webexpert-field:last-child {
+	margin-bottom: 0;
+}
+
+.webexpert-field-group {
+	padding: 14px 12px;
+	background: #f9fafb;
+	border: 1px solid #e0e0e0;
+	border-radius: 4px;
+	margin-top: 12px;
+}
+
+.webexpert-field-group:first-child {
+	margin-top: 0;
+}
+
+.dkexpress-settings-wrap .webexpert-field-label {
+	vertical-align: top;
+	margin: 0 0 4px;
+}
+
+.dkexpress-settings-wrap .webexpert-field-label label {
+	display: block;
+	font-weight: normal;
+	font-size: 13px;
+	color: #50575e;
+	margin: 0;
+	padding: 0;
+}
+
+.webexpert-field-input input:not([type=checkbox]):not([type=radio]),
+.webexpert-field-input textarea,
+.webexpert-field-input select {
+	width: 100%;
+	padding: 6px 10px;
+	margin: 0;
+	box-sizing: border-box;
+	font-size: 13px;
+	line-height: 1.5;
+	border: 1px solid #d0d5dd;
+	border-radius: 4px;
+	transition: border-color .15s, box-shadow .15s;
+}
+
+.webexpert-field-input textarea {
+	resize: vertical;
+	min-height: 60px;
+}
+
+.webexpert-field-input select[multiple] {
+	min-height: 100px;
+	padding: 4px;
+}
+
+.webexpert-field-input input:not([type=checkbox]):not([type=radio]):focus,
+.webexpert-field-input textarea:focus,
+.webexpert-field-input select:focus {
+	border-color: #0073aa;
+	box-shadow: 0 0 0 1px #0073aa;
+	outline: none;
+}
+
+/* ── Info group (voucher/status/tracking) ────────── */
+.dkexpress-info-group {
+	padding: 0;
+	overflow: hidden;
+}
+
+.dkexpress-info-row {
+	display: flex;
+	align-items: baseline;
+	padding: 8px 12px;
+	font-size: 13px;
+	border-bottom: 1px solid #eee;
+}
+
+.dkexpress-info-row:last-child {
+	border-bottom: none;
+}
+
+.dkexpress-info-label {
+	font-weight: 600;
+	color: #50575e;
+	min-width: 100px;
+	flex-shrink: 0;
+}
+
+.dkexpress-info-value {
+	color: #1d2327;
+	word-break: break-word;
+}
+
+/* ── Radio group (print type) ────────────────────── */
+.dkexpress-radio-group {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px 16px;
+}
+
+.dkexpress-radio-group label {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	font-size: 13px;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+/* ── Action button fields ────────────────────────── */
+.dkexpress-action-field {
+	margin: 8px 0 0;
+}
+
+.dkexpress-action-field .button {
+	display: inline-flex;
+	align-items: center;
+}
+
+/* ── Danger group (cancel/reset) ─────────────────── */
+.dkexpress-danger-group {
+	background: #fffbfb;
+	border-color: #f0dede;
+}
+
+.dkexpress-danger-group .button {
+	color: #a10b0d;
+	border-color: #d4a0a0;
+}
+
+.dkexpress-danger-group .button:hover {
+	background: #fcf0f1;
+	border-color: #a10b0d;
+	color: #a10b0d;
+}
+
+/* ── Popup blocked notice ────────────────────────── */
+.dkexpress-popup-notice {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-top: 10px;
+	padding: 8px 12px;
+	background: #fcf0f1;
+	border: 1px solid #f0b8b8;
+	border-radius: 4px;
+	font-size: 12px;
+	color: #a10b0d;
+}
+
+.dkexpress-popup-notice a {
+	color: #0073aa;
+	font-weight: 500;
+}
+
+.dkexpress-popup-notice .dashicons {
+	font-size: 16px;
+	width: 16px;
+	height: 16px;
+	flex-shrink: 0;
+}
+
+/* ── Spinner on buttons ──────────────────────────── */
+@keyframes spinner {
+	to { transform: rotate(360deg); }
+}
+
+.button.has-spinner {
+	position: relative;
+}
+
+.button.has-spinner .we_spinner:before {
+	display: none;
+}
+
+.button.has-spinner.is-active {
+	padding-right: 30px;
+}
+
+.button.has-spinner.is-active .we_spinner:before {
+	display: block;
+	content: '';
+	box-sizing: border-box;
+	position: absolute;
+	top: 50%;
+	right: 8px;
+	width: 14px;
+	height: 14px;
+	margin-top: -7px;
+	margin-left: -7px;
+	border-radius: 50%;
+	border: 2px solid #ccc;
+	border-top-color: #000;
+	animation: spinner .6s linear infinite;
+}
+
+/* ── Delivered icon in order list ─────────────────── */
+.webexpert-delivered-icon {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 4px;
+}
+
+/* ── License gate ─────────────────────────────────── */
+
+/* Metabox: license required card */
+.webexpert-license-gate {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 24px 16px;
+	gap: 10px;
+}
+
+.webexpert-license-gate__icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	filter: drop-shadow(0 2px 4px rgba(160,116,10,.45));
+}
+
+.webexpert-license-gate__title {
+	font-size: 14px;
+	font-weight: 600;
+	color: #1d2327;
+	margin: 0;
+}
+
+.webexpert-license-gate__msg {
+	font-size: 12px;
+	color: #646970;
+	margin: 0;
+	line-height: 1.5;
+}
+
+.webexpert-license-gate__btn {
+	margin-top: 6px !important;
+}
+
+/* ── License banner ──────────────────────────────── */
+.webexpert-tab-locked svg       { vertical-align: middle; }
+
+/* ── Order metabox soft-lock overlay ─────────────── */
+.webexpert-mb-locked-wrap {
+	position: relative;
+	min-height: 80px;
+}
+.webexpert-mb-locked-wrap.is-locked > *:not(.webexpert-mb-lock-overlay) {
+	opacity: 0.3;
+	pointer-events: none;
+	user-select: none;
+}
+.webexpert-mb-lock-overlay {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: rgba(255,255,255,0.78);
+	z-index: 10;
+	text-align: center;
+	padding: 16px 12px;
+}
+.webexpert-mb-lock-overlay .dashicons-lock {
+	font-size: 26px;
+	width: 26px;
+	height: 26px;
+	color: #d4a017;
+}
+.webexpert-mb-lock-overlay strong {
+	font-size: 13px;
+	color: #1d2327;
+}
+.webexpert-mb-lock-overlay p {
+	font-size: 11px;
+	color: #646970;
+	margin: 0 0 8px;
+}
+
+.we-submit-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.we-disconnect-btn {
+    color: #d63638 !important;
+    border-color: #d63638 !important;
+    height: 34px;
+    line-height: 32px;
+}
+
+/* ── License banner + locked tabs (canonical) ───── */
+.webexpert-license-banner {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	background: #fff8e5;
+	border: 1px solid #f0c040;
+	border-radius: 6px;
+	padding: 12px 16px;
+	margin: 12px 0 20px;
+	font-size: 13px;
+	color: #614200;
+}
+.webexpert-license-banner__icon {
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	filter: drop-shadow(0 1px 2px rgba(160,116,10,.4));
+}
+.webexpert-license-banner .button-primary {
+	background: #0073aa !important;
+	border-color: #0073aa !important;
+	color: #fff;
+	border-radius: 4px;
+}
+.webexpert-license-banner .button-primary:hover {
+	background: #005d8c !important;
+	border-color: #005d8c !important;
+}
+.webexpert-tab-locked {
+	opacity: 0.45;
+	cursor: not-allowed;
+	color: #646970 !important;
+	border-bottom-color: transparent !important;
+	user-select: none;
+}
+.webexpert-tab-locked:hover {
+	color: #646970 !important;
+	border-bottom-color: transparent !important;
+	background: transparent !important;
+}
+
+/* ── License badge (canonical) ─────────────────────── */
+.webexpert-license-badge {
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	margin-left: 4px;
+	vertical-align: middle;
+}
+.webexpert-license-valid {
+	background: #00a32a;
+	box-shadow: 0 0 0 2px rgba(0, 163, 42, .2);
+}
+.webexpert-license-invalid {
+	background: #d63638;
+	box-shadow: 0 0 0 2px rgba(214, 54, 56, .2);
+}/* ── Canonical input styling ─────────────────────── */
+
+/* ── Canonical input styling ─────────────────────── */
+.dkexpress-settings-wrap input[type="text"],
+.dkexpress-settings-wrap input[type="email"],
+.dkexpress-settings-wrap input[type="number"],
+.dkexpress-settings-wrap input[type="date"],
+.dkexpress-settings-wrap input[type="search"],
+.dkexpress-settings-wrap input[type="password"],
+.dkexpress-settings-wrap input[type="tel"],
+.dkexpress-settings-wrap input[type="url"] {
+	border: 1px solid #d0d5dd;
+	border-radius: 4px;
+	padding: 6px 10px;
+	font-size: 13px;
+	line-height: 1.5;
+	color: #1d2327;
+	background: #fff;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
+	transition: border-color .15s, box-shadow .15s;
+}/* ── form-table description (canonical) ─────────── */
+.dkexpress-settings-wrap .form-table td p.description {
+	margin: 6px 0 0;
+	font-size: 12px;
+	color: #8c8f94;
+	font-style: italic;
+}
+
+/* ── form-table label (canonical) ───────────────── */
+.dkexpress-settings-wrap .form-table th label {
+	padding: 12px 10px 12px 0;
+	font-weight: 600;
+	font-size: 13px;
+}
+
+/* ── Regular select (matches WP-core regular-text width) ─ */
+.webexpert-regular-select {
+	width: 25em;
+	border-color: #d0d5dd;
+}
+
+/* ── Select border (match input border for consistency) ─ */
+.dkexpress-settings-wrap select {
+	border-color: #d0d5dd;
+}
+
+/* ── Select2 focus border (match input border for consistency) ─ */
+.dkexpress-settings-wrap .select2-container--default.select2-container--focus .select2-selection--multiple,
+.dkexpress-settings-wrap .select2-container--default.select2-container--focus .select2-selection--single {
+	border-color: #d0d5dd;
+}
+
+/* ── Select2 default border (match input border) ─ */
+.dkexpress-settings-wrap .select2-container--default .select2-selection--multiple,
+.dkexpress-settings-wrap .select2-container--default .select2-selection--single {
+	border-color: #d0d5dd;
+}

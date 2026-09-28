@@ -1,0 +1,4 @@
+# Kept out of GitHub's source zips, which is what the update checker installs when a release has no asset.
+/tests export-ignore
+/.gitignore export-ignore
+/.gitattributes export-ignore

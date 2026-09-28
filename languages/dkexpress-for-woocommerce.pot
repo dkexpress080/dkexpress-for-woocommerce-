@@ -1,0 +1,876 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the DK Express for WooCommerce package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: DK Express for WooCommerce\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-23 21:24+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:211
+msgid "Popup blocked by your browser."
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:212
+msgid "Click here to open"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:213
+msgid "The voucher could not be printed."
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:224
+#: admin/class-dkexpress-for-woocommerce-admin.php:604
+msgid "Status"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:239
+msgctxt "post type general name"
+msgid "Jobs"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:240
+msgctxt "post type singular name"
+msgid "Job"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:241
+msgctxt "admin menu"
+msgid "Jobs"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:242
+msgctxt "add new on admin bar"
+msgid "Jobs"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:243
+msgctxt "book"
+msgid "Add New"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:244
+msgid "Add New Job"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:245
+msgid "New Job"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:246
+msgid "Edit Job"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:247
+msgid "View Job"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:248
+msgid "All Jobs"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:249
+msgid "Search Jobs"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:250
+msgid "Parent Jobs:"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:251
+msgid "No jobs found."
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:252
+msgid "No jobs found in Trash."
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:257
+msgid "Job"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:258
+msgid "Jobs"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:279
+msgid "Title"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:280
+msgid "Job Status"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:281
+msgid "Carrier"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:282
+#: admin/class-dkexpress-for-woocommerce-admin.php:608
+msgid "Track & Trace"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:283
+msgid "Print"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:284
+msgid "Actions"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:301
+#, php-format
+msgid "Account %d"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:329
+#: admin/class-dkexpress-for-woocommerce-admin.php:706
+#: admin/class-dkexpress-for-woocommerce-admin.php:1724
+msgid "A4"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:330
+msgid "100x150"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:339
+#: admin/class-dkexpress-for-woocommerce-admin.php:728
+msgid "Voucher has been cancelled"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:339
+#: admin/class-dkexpress-for-woocommerce-admin.php:728
+msgid "The voucher could not be cancelled."
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:339
+msgid "Cancel"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:360
+msgid "Opened"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:363
+msgid "Cancelled"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:366
+msgid "Closed"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:369
+msgid "Not initialized"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:435
+#: admin/class-dkexpress-for-woocommerce-admin.php:535
+#: admin/class-dkexpress-for-woocommerce-admin.php:1487
+#: admin/class-dkexpress-for-woocommerce-admin.php:1584
+msgid "DK Express"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:463
+#: admin/class-dkexpress-for-woocommerce-admin.php:707
+#: admin/class-dkexpress-for-woocommerce-admin.php:1725
+msgid "Clean"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:464
+#: admin/class-dkexpress-for-woocommerce-admin.php:708
+#: admin/class-dkexpress-for-woocommerce-admin.php:1726
+msgid "Single PDF"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:465
+#: admin/class-dkexpress-for-woocommerce-admin.php:709
+#: admin/class-dkexpress-for-woocommerce-admin.php:1727
+msgid "Single Clean"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:466
+#: admin/class-dkexpress-for-woocommerce-admin.php:710
+#: admin/class-dkexpress-for-woocommerce-admin.php:1728
+msgid "Single 100x150"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:467
+#: admin/class-dkexpress-for-woocommerce-admin.php:711
+#: admin/class-dkexpress-for-woocommerce-admin.php:1729
+msgid "Clean 100x150"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:468
+#: admin/class-dkexpress-for-woocommerce-admin.php:712
+#: admin/class-dkexpress-for-woocommerce-admin.php:1730
+msgid "Single 100x170"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:469
+#: admin/class-dkexpress-for-woocommerce-admin.php:713
+#: admin/class-dkexpress-for-woocommerce-admin.php:1731
+msgid "Clean 100x170"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:512
+#: includes/class-wx-courier-metabox-ux.php:960
+msgid "Return voucher"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:513
+#: includes/class-wx-courier-metabox-ux.php:812
+msgid "Prepaid return label"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:513
+msgid "A return AWB is issued together with the voucher"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:514
+msgid "Return labels are issued together with the outbound voucher."
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:519
+#: admin/class-dkexpress-for-woocommerce-admin.php:877
+#: includes/class-wx-courier-metabox-ux.php:1128
+#: includes/class-wx-courier-metabox-ux.php:1267
+msgid "No label returned."
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:589
+#: admin/class-dkexpress-for-woocommerce-admin.php:1686
+#: includes/class-wx-courier-metabox-ux.php:880
+msgid "Voucher"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:597
+msgid "Sub Voucher"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:617
+#: includes/class-wx-courier-metabox-ux.php:616
+msgid "Parcels"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:626
+msgid "Weight (in kg)"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:647
+msgid "Cash on delivery price"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:658
+#: includes/class-wx-courier-metabox-ux.php:826
+msgid "Comments"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:679
+msgid "Select your account"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:693
+msgid "There was an error issuing the voucher."
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:693
+msgid "Vouchers have been created!"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:693
+#: includes/class-wx-courier-metabox-ux.php:858
+msgid "Create voucher"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:700
+msgid "Print type"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:722
+#: includes/class-wx-courier-metabox-ux.php:997
+msgid "Print voucher"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:729
+#: includes/class-wx-courier-metabox-ux.php:937
+msgid "Cancel voucher"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:751
+msgid "Date From"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:751
+msgid "Date To"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:793
+msgid "Print jobs (DK Express)"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:794
+msgid "Cancel jobs (DK Express)"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:795
+msgid "Delete jobs"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:802
+msgid "Selected jobs were cancelled"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:808
+msgid "No vouchers were selected for print"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:814
+msgid "DK Express could not cancel some vouchers:"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:819
+msgid "DK Express could not print the selected vouchers."
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:824
+msgid ""
+"You should select jobs that have been created by the same DK Express account"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:908
+#: admin/class-dkexpress-for-woocommerce-admin.php:936
+#: admin/class-dkexpress-for-woocommerce-admin.php:1181
+msgid "Insufficient permissions."
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:915
+msgid "This order has no DK Express voucher."
+msgstr ""
+
+#. translators: %s: voucher number
+#: admin/class-dkexpress-for-woocommerce-admin.php:1029
+#, php-format
+msgid "This order already has voucher %s. Cancel it first to issue a new one."
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1134
+msgid "DK Express did not return a shipment number."
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1139
+msgid "Job for order"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1518
+msgid "Tracking"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1532
+#: admin/class-dkexpress-for-woocommerce-admin.php:1614
+msgid "Settings"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1578
+#: includes/class-wx-courier-metabox-ux.php:254
+#: includes/class-wx-courier-metabox-ux.php:418
+msgid "Delivered"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1613
+msgid "Accounts"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1618
+msgid "Tools"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1651
+msgid "Account ID:"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1654
+msgid "Username"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1658
+msgid "Password"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1662
+msgid "API"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1666
+msgid "Customer code"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1670
+msgid "Basic service code"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1677
+msgid "Add extra account"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1689
+msgid "Auto issue"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1692
+msgid "Auto issue voucher upon order completion"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1695
+msgid "Improved UX"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1698
+msgid "Use the new voucher box on the order page"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1702
+msgid "Default DK Express account"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1720
+msgid "Default print size"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1736
+msgid "Default weight (kg)"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1740
+msgid "Default weight per item (kg)"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1747
+msgid "Shipping"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1750
+msgid "Disable volumetric"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1753
+msgid "Disable volumetric weight calculation"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1756
+msgid "Disable on specific Payment Gateways"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1771
+msgid "Disable on specific Shipping Methods"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1806
+msgid "Advanced"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1809
+msgid "Debug"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1812
+msgid "Debug mode logs every request made"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1826
+#: admin/class-dkexpress-for-woocommerce-admin.php:1833
+msgid "Export Orders"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1830
+msgid "Export"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1835
+msgid ""
+"Please install Web Expert WooCommerce Order Tracking in order to enable "
+"exporter."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:257
+#: includes/class-wx-courier-metabox-ux.php:414
+msgid "Not delivered"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:260
+msgid "Returned"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:263
+#: includes/class-wx-courier-metabox-ux.php:411
+msgid "Out for delivery"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:266
+#: includes/class-wx-courier-metabox-ux.php:410
+msgid "In transit"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:268
+#: includes/class-wx-courier-metabox-ux.php:408
+msgid "Issued"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:270
+msgid "Not issued"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:409
+msgid "Picked up"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:416
+msgid "Returned to sender"
+msgstr ""
+
+#. translators: %s: courier name
+#: includes/class-wx-courier-metabox-ux.php:546
+#, php-format
+msgid "Not used for this order. Shipped with %s."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:568
+msgid "License required"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:569
+msgid "Activate your license to use this feature."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:570
+msgid "Activate"
+msgstr ""
+
+#. translators: 1: voucher number 2: date/time
+#: includes/class-wx-courier-metabox-ux.php:600
+#, php-format
+msgid "Voucher %1$s cancelled %2$s. Details below were kept."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:604
+msgid "Dismiss"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:633
+msgid "saved"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:638
+msgid "auto from products"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:641
+msgid "default"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:646
+msgid "Weight"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:667
+msgid "Pickup date"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:667
+msgid "moved to today"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:686
+msgid "Cash on delivery"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:737
+msgid "Services"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:746
+#: includes/class-wx-courier-metabox-ux.php:939
+msgid "More"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:770
+msgid "Insurance amount"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:826
+msgid "from customer note"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:826
+#, php-format
+msgid "max %d chars"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:843
+msgid "Account"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:872
+msgid "Not delivered."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:872
+msgid ""
+"The courier will retry or return the parcel. Check the last event below."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:874
+msgid "Returned to sender."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:883
+#: includes/class-wx-courier-metabox-ux.php:966
+msgid "Copy"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:884
+msgid "Track on courier site"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:889
+#, php-format
+msgid "%d sub-voucher"
+msgid_plural "%d sub-vouchers"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-wx-courier-metabox-ux.php:910
+#, php-format
+msgid "updated %s"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:910
+msgid "tracking stopped"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:911
+#: includes/class-wx-courier-metabox-ux.php:916
+msgid "refresh"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:912
+#: includes/class-wx-courier-metabox-ux.php:917
+#, php-format
+msgid "all %d events"
+msgid_plural "all %d events"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-wx-courier-metabox-ux.php:914
+msgid "No courier scans yet."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:915
+#, php-format
+msgid "checked %s"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:915
+msgid "waiting for the first tracking check"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:941
+msgid "Reset job (local only)"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:968
+msgid "Print return label"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:977
+msgid "Issue return voucher"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:997
+#, php-format
+msgid "Print %s"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1022
+#, php-format
+msgid "%d parcel"
+msgid_plural "%d parcels"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-wx-courier-metabox-ux.php:1034
+#, php-format
+msgid "pickup %s"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1040
+#, php-format
+msgid "COD %s"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1055
+msgid "Details:"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1055
+msgid "Details"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1078
+msgid "just now"
+msgstr ""
+
+#. translators: %s: human time diff (core string, translated by WordPress)
+#: includes/class-wx-courier-metabox-ux.php:1082
+#, php-format
+msgid "%s ago"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1117
+msgid "Voucher created."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1118
+#: includes/class-wx-courier-metabox-ux.php:1491
+msgid "Voucher cancelled."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1119
+msgid "Job reset. The voucher, if any, still exists at the courier."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1120
+#, php-format
+msgid "Cancel voucher %s at the courier? The label becomes invalid."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1121
+msgid "Reset the voucher process for this order? This only clears local data."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1122
+msgid "Label opened in a new tab."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1123
+msgid "Your browser blocked the label window."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1124
+msgid "Open label"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1125
+msgid "Something went wrong."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1126
+#: includes/class-wx-courier-metabox-ux.php:1181
+msgid "License required."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1127
+msgid "Copied"
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1129
+#: includes/class-wx-courier-metabox-ux.php:1218
+msgid "Tracking refreshed."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1130
+msgid ""
+"Issue a return voucher at the courier for this order? The customer sends the "
+"parcel back with it."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1131
+#: includes/class-wx-courier-metabox-ux.php:1248
+msgid "Return voucher issued."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1178
+msgid "You do not have permission to perform this action."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1185
+msgid "Order not found."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1210
+msgid "Tracking is not available."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1228
+msgid "This courier has no return voucher call."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1232
+msgid "Issue the outbound voucher first."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1235
+msgid "A return voucher already exists for this order."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1243
+msgid "The courier returned no return voucher number."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1247
+#, php-format
+msgid "%1$s return voucher %2$s issued."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1255
+msgid "Printing the return label is not available."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1260
+msgid "No return voucher on this order."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1461
+msgid "Cancel is not available."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1477
+msgid "The courier refused the cancellation."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1489
+#, php-format
+msgid "%1$s voucher %2$s cancelled."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1502
+#, php-format
+msgid "%1$s job reset locally. Voucher %2$s was not cancelled at the courier."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1504
+msgid "Job reset."
+msgstr ""
+
+#: includes/class-wx-courier-metabox-ux.php:1518
+#, php-format
+msgid "%1$s voucher %2$s issued."
+msgstr ""
+
+#: public/class-dkexpress-for-woocommerce-public.php:43
+msgid "Voucher number"
+msgstr ""
+
+#: public/class-dkexpress-for-woocommerce-public.php:45
+msgid "Track"
+msgstr ""
