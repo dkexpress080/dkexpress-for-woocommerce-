@@ -1414,9 +1414,13 @@ class DKExpress_For_Woocommerce_Admin {
 		$tracking_list = (array) ( $apiResponse['TrackingList'] ?? [] );
 		$statuses = array_map( function ( $row ) { return (string) ( $row['Status'] ?? '' ); }, $tracking_list );
 		$delivered_at = '';
+		// Code 29 is both the delivery and, days later on COD orders, the payout to the merchant: the earliest one is the delivery.
 		foreach ( $tracking_list as $row ) {
 			if ( '29' === (string) ( $row['Status'] ?? '' ) ) {
-				$delivered_at = max( $delivered_at, self::parse_courier_datetime( $row['ExecutedOn'] ?? '' ) );
+				$at = self::parse_courier_datetime( $row['ExecutedOn'] ?? '' );
+				if ( '' !== $at && ( '' === $delivered_at || $at < $delivered_at ) ) {
+					$delivered_at = $at;
+				}
 			}
 		}
 
