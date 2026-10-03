@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DK Express for WooCommerce\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-23 21:24+0300\n"
+"POT-Creation-Date: 2026-10-03 11:04+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,485 +18,493 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:211
+#: admin/class-dkexpress-for-woocommerce-admin.php:246
 msgid "Popup blocked by your browser."
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:212
+#: admin/class-dkexpress-for-woocommerce-admin.php:247
 msgid "Click here to open"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:213
+#: admin/class-dkexpress-for-woocommerce-admin.php:248
 msgid "The voucher could not be printed."
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:224
-#: admin/class-dkexpress-for-woocommerce-admin.php:604
+#: admin/class-dkexpress-for-woocommerce-admin.php:273
+#: admin/class-dkexpress-for-woocommerce-admin.php:655
 msgid "Status"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:239
+#: admin/class-dkexpress-for-woocommerce-admin.php:288
 msgctxt "post type general name"
 msgid "Jobs"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:240
+#: admin/class-dkexpress-for-woocommerce-admin.php:289
 msgctxt "post type singular name"
 msgid "Job"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:241
+#: admin/class-dkexpress-for-woocommerce-admin.php:290
 msgctxt "admin menu"
 msgid "Jobs"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:242
+#: admin/class-dkexpress-for-woocommerce-admin.php:291
 msgctxt "add new on admin bar"
 msgid "Jobs"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:243
+#: admin/class-dkexpress-for-woocommerce-admin.php:292
 msgctxt "book"
 msgid "Add New"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:244
+#: admin/class-dkexpress-for-woocommerce-admin.php:293
 msgid "Add New Job"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:245
+#: admin/class-dkexpress-for-woocommerce-admin.php:294
 msgid "New Job"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:246
+#: admin/class-dkexpress-for-woocommerce-admin.php:295
 msgid "Edit Job"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:247
+#: admin/class-dkexpress-for-woocommerce-admin.php:296
 msgid "View Job"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:248
+#: admin/class-dkexpress-for-woocommerce-admin.php:297
 msgid "All Jobs"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:249
+#: admin/class-dkexpress-for-woocommerce-admin.php:298
 msgid "Search Jobs"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:250
+#: admin/class-dkexpress-for-woocommerce-admin.php:299
 msgid "Parent Jobs:"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:251
+#: admin/class-dkexpress-for-woocommerce-admin.php:300
 msgid "No jobs found."
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:252
+#: admin/class-dkexpress-for-woocommerce-admin.php:301
 msgid "No jobs found in Trash."
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:257
+#: admin/class-dkexpress-for-woocommerce-admin.php:306
 msgid "Job"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:258
+#: admin/class-dkexpress-for-woocommerce-admin.php:307
 msgid "Jobs"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:279
+#: admin/class-dkexpress-for-woocommerce-admin.php:328
 msgid "Title"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:280
+#: admin/class-dkexpress-for-woocommerce-admin.php:329
 msgid "Job Status"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:281
+#: admin/class-dkexpress-for-woocommerce-admin.php:330
 msgid "Carrier"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:282
-#: admin/class-dkexpress-for-woocommerce-admin.php:608
+#: admin/class-dkexpress-for-woocommerce-admin.php:331
+#: admin/class-dkexpress-for-woocommerce-admin.php:659
 msgid "Track & Trace"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:283
+#: admin/class-dkexpress-for-woocommerce-admin.php:332
 msgid "Print"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:284
+#: admin/class-dkexpress-for-woocommerce-admin.php:333
 msgid "Actions"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:301
+#: admin/class-dkexpress-for-woocommerce-admin.php:351
 #, php-format
 msgid "Account %d"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:329
-#: admin/class-dkexpress-for-woocommerce-admin.php:706
-#: admin/class-dkexpress-for-woocommerce-admin.php:1724
+#: admin/class-dkexpress-for-woocommerce-admin.php:379
+#: admin/class-dkexpress-for-woocommerce-admin.php:757
+#: admin/class-dkexpress-for-woocommerce-admin.php:1785
 msgid "A4"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:330
+#: admin/class-dkexpress-for-woocommerce-admin.php:380
 msgid "100x150"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:339
-#: admin/class-dkexpress-for-woocommerce-admin.php:728
+#: admin/class-dkexpress-for-woocommerce-admin.php:389
+#: admin/class-dkexpress-for-woocommerce-admin.php:779
 msgid "Voucher has been cancelled"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:339
-#: admin/class-dkexpress-for-woocommerce-admin.php:728
+#: admin/class-dkexpress-for-woocommerce-admin.php:389
+#: admin/class-dkexpress-for-woocommerce-admin.php:779
 msgid "The voucher could not be cancelled."
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:339
+#: admin/class-dkexpress-for-woocommerce-admin.php:389
 msgid "Cancel"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:360
+#: admin/class-dkexpress-for-woocommerce-admin.php:411
 msgid "Opened"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:363
+#: admin/class-dkexpress-for-woocommerce-admin.php:414
 msgid "Cancelled"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:366
+#: admin/class-dkexpress-for-woocommerce-admin.php:417
 msgid "Closed"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:369
+#: admin/class-dkexpress-for-woocommerce-admin.php:420
 msgid "Not initialized"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:435
-#: admin/class-dkexpress-for-woocommerce-admin.php:535
-#: admin/class-dkexpress-for-woocommerce-admin.php:1487
-#: admin/class-dkexpress-for-woocommerce-admin.php:1584
+#: admin/class-dkexpress-for-woocommerce-admin.php:486
+#: admin/class-dkexpress-for-woocommerce-admin.php:586
+#: admin/class-dkexpress-for-woocommerce-admin.php:1546
+#: admin/class-dkexpress-for-woocommerce-admin.php:1643
 msgid "DK Express"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:463
-#: admin/class-dkexpress-for-woocommerce-admin.php:707
-#: admin/class-dkexpress-for-woocommerce-admin.php:1725
+#: admin/class-dkexpress-for-woocommerce-admin.php:514
+#: admin/class-dkexpress-for-woocommerce-admin.php:758
+#: admin/class-dkexpress-for-woocommerce-admin.php:1786
 msgid "Clean"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:464
-#: admin/class-dkexpress-for-woocommerce-admin.php:708
-#: admin/class-dkexpress-for-woocommerce-admin.php:1726
+#: admin/class-dkexpress-for-woocommerce-admin.php:515
+#: admin/class-dkexpress-for-woocommerce-admin.php:759
+#: admin/class-dkexpress-for-woocommerce-admin.php:1787
 msgid "Single PDF"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:465
-#: admin/class-dkexpress-for-woocommerce-admin.php:709
-#: admin/class-dkexpress-for-woocommerce-admin.php:1727
+#: admin/class-dkexpress-for-woocommerce-admin.php:516
+#: admin/class-dkexpress-for-woocommerce-admin.php:760
+#: admin/class-dkexpress-for-woocommerce-admin.php:1788
 msgid "Single Clean"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:466
-#: admin/class-dkexpress-for-woocommerce-admin.php:710
-#: admin/class-dkexpress-for-woocommerce-admin.php:1728
+#: admin/class-dkexpress-for-woocommerce-admin.php:517
+#: admin/class-dkexpress-for-woocommerce-admin.php:761
+#: admin/class-dkexpress-for-woocommerce-admin.php:1789
 msgid "Single 100x150"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:467
-#: admin/class-dkexpress-for-woocommerce-admin.php:711
-#: admin/class-dkexpress-for-woocommerce-admin.php:1729
+#: admin/class-dkexpress-for-woocommerce-admin.php:518
+#: admin/class-dkexpress-for-woocommerce-admin.php:762
+#: admin/class-dkexpress-for-woocommerce-admin.php:1790
 msgid "Clean 100x150"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:468
-#: admin/class-dkexpress-for-woocommerce-admin.php:712
-#: admin/class-dkexpress-for-woocommerce-admin.php:1730
+#: admin/class-dkexpress-for-woocommerce-admin.php:519
+#: admin/class-dkexpress-for-woocommerce-admin.php:763
+#: admin/class-dkexpress-for-woocommerce-admin.php:1791
 msgid "Single 100x170"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:469
-#: admin/class-dkexpress-for-woocommerce-admin.php:713
-#: admin/class-dkexpress-for-woocommerce-admin.php:1731
+#: admin/class-dkexpress-for-woocommerce-admin.php:520
+#: admin/class-dkexpress-for-woocommerce-admin.php:764
+#: admin/class-dkexpress-for-woocommerce-admin.php:1792
 msgid "Clean 100x170"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:512
+#: admin/class-dkexpress-for-woocommerce-admin.php:563
 #: includes/class-wx-courier-metabox-ux.php:960
 msgid "Return voucher"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:513
+#: admin/class-dkexpress-for-woocommerce-admin.php:564
 #: includes/class-wx-courier-metabox-ux.php:812
 msgid "Prepaid return label"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:513
+#: admin/class-dkexpress-for-woocommerce-admin.php:564
 msgid "A return AWB is issued together with the voucher"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:514
+#: admin/class-dkexpress-for-woocommerce-admin.php:565
 msgid "Return labels are issued together with the outbound voucher."
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:519
-#: admin/class-dkexpress-for-woocommerce-admin.php:877
+#: admin/class-dkexpress-for-woocommerce-admin.php:570
+#: admin/class-dkexpress-for-woocommerce-admin.php:928
 #: includes/class-wx-courier-metabox-ux.php:1128
 #: includes/class-wx-courier-metabox-ux.php:1267
 msgid "No label returned."
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:589
-#: admin/class-dkexpress-for-woocommerce-admin.php:1686
+#: admin/class-dkexpress-for-woocommerce-admin.php:640
+#: admin/class-dkexpress-for-woocommerce-admin.php:1747
 #: includes/class-wx-courier-metabox-ux.php:880
 msgid "Voucher"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:597
+#: admin/class-dkexpress-for-woocommerce-admin.php:648
 msgid "Sub Voucher"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:617
+#: admin/class-dkexpress-for-woocommerce-admin.php:668
 #: includes/class-wx-courier-metabox-ux.php:616
 msgid "Parcels"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:626
+#: admin/class-dkexpress-for-woocommerce-admin.php:677
 msgid "Weight (in kg)"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:647
+#: admin/class-dkexpress-for-woocommerce-admin.php:698
 msgid "Cash on delivery price"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:658
+#: admin/class-dkexpress-for-woocommerce-admin.php:709
 #: includes/class-wx-courier-metabox-ux.php:826
 msgid "Comments"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:679
+#: admin/class-dkexpress-for-woocommerce-admin.php:730
 msgid "Select your account"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:693
+#: admin/class-dkexpress-for-woocommerce-admin.php:744
 msgid "There was an error issuing the voucher."
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:693
+#: admin/class-dkexpress-for-woocommerce-admin.php:744
 msgid "Vouchers have been created!"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:693
+#: admin/class-dkexpress-for-woocommerce-admin.php:744
 #: includes/class-wx-courier-metabox-ux.php:858
 msgid "Create voucher"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:700
+#: admin/class-dkexpress-for-woocommerce-admin.php:751
 msgid "Print type"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:722
+#: admin/class-dkexpress-for-woocommerce-admin.php:773
 #: includes/class-wx-courier-metabox-ux.php:997
 msgid "Print voucher"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:729
+#: admin/class-dkexpress-for-woocommerce-admin.php:780
 #: includes/class-wx-courier-metabox-ux.php:937
 msgid "Cancel voucher"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:751
+#: admin/class-dkexpress-for-woocommerce-admin.php:802
 msgid "Date From"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:751
+#: admin/class-dkexpress-for-woocommerce-admin.php:802
 msgid "Date To"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:793
+#: admin/class-dkexpress-for-woocommerce-admin.php:844
 msgid "Print jobs (DK Express)"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:794
+#: admin/class-dkexpress-for-woocommerce-admin.php:845
 msgid "Cancel jobs (DK Express)"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:795
+#: admin/class-dkexpress-for-woocommerce-admin.php:846
 msgid "Delete jobs"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:802
+#: admin/class-dkexpress-for-woocommerce-admin.php:853
 msgid "Selected jobs were cancelled"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:808
+#: admin/class-dkexpress-for-woocommerce-admin.php:859
 msgid "No vouchers were selected for print"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:814
+#: admin/class-dkexpress-for-woocommerce-admin.php:865
 msgid "DK Express could not cancel some vouchers:"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:819
+#: admin/class-dkexpress-for-woocommerce-admin.php:870
 msgid "DK Express could not print the selected vouchers."
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:824
+#: admin/class-dkexpress-for-woocommerce-admin.php:875
 msgid ""
 "You should select jobs that have been created by the same DK Express account"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:908
-#: admin/class-dkexpress-for-woocommerce-admin.php:936
-#: admin/class-dkexpress-for-woocommerce-admin.php:1181
+#: admin/class-dkexpress-for-woocommerce-admin.php:959
+#: admin/class-dkexpress-for-woocommerce-admin.php:987
+#: admin/class-dkexpress-for-woocommerce-admin.php:1236
 msgid "Insufficient permissions."
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:915
+#: admin/class-dkexpress-for-woocommerce-admin.php:966
 msgid "This order has no DK Express voucher."
 msgstr ""
 
 #. translators: %s: voucher number
-#: admin/class-dkexpress-for-woocommerce-admin.php:1029
+#: admin/class-dkexpress-for-woocommerce-admin.php:1080
 #, php-format
 msgid "This order already has voucher %s. Cancel it first to issue a new one."
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:1134
+#: admin/class-dkexpress-for-woocommerce-admin.php:1189
 msgid "DK Express did not return a shipment number."
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:1139
+#: admin/class-dkexpress-for-woocommerce-admin.php:1194
 msgid "Job for order"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:1518
+#: admin/class-dkexpress-for-woocommerce-admin.php:1577
 msgid "Tracking"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:1532
-#: admin/class-dkexpress-for-woocommerce-admin.php:1614
+#: admin/class-dkexpress-for-woocommerce-admin.php:1591
+#: admin/class-dkexpress-for-woocommerce-admin.php:1675
 msgid "Settings"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:1578
+#: admin/class-dkexpress-for-woocommerce-admin.php:1637
 #: includes/class-wx-courier-metabox-ux.php:254
 #: includes/class-wx-courier-metabox-ux.php:418
 msgid "Delivered"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:1613
+#: admin/class-dkexpress-for-woocommerce-admin.php:1674
 msgid "Accounts"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:1618
+#: admin/class-dkexpress-for-woocommerce-admin.php:1679
 msgid "Tools"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:1651
+#: admin/class-dkexpress-for-woocommerce-admin.php:1712
 msgid "Account ID:"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:1654
+#: admin/class-dkexpress-for-woocommerce-admin.php:1715
 msgid "Username"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:1658
+#: admin/class-dkexpress-for-woocommerce-admin.php:1719
 msgid "Password"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:1662
+#: admin/class-dkexpress-for-woocommerce-admin.php:1723
 msgid "API"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:1666
+#: admin/class-dkexpress-for-woocommerce-admin.php:1727
 msgid "Customer code"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:1670
+#: admin/class-dkexpress-for-woocommerce-admin.php:1731
 msgid "Basic service code"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:1677
+#: admin/class-dkexpress-for-woocommerce-admin.php:1738
 msgid "Add extra account"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:1689
+#: admin/class-dkexpress-for-woocommerce-admin.php:1750
 msgid "Auto issue"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:1692
+#: admin/class-dkexpress-for-woocommerce-admin.php:1753
 msgid "Auto issue voucher upon order completion"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:1695
+#: admin/class-dkexpress-for-woocommerce-admin.php:1756
 msgid "Improved UX"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:1698
+#: admin/class-dkexpress-for-woocommerce-admin.php:1759
 msgid "Use the new voucher box on the order page"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:1702
+#: admin/class-dkexpress-for-woocommerce-admin.php:1763
 msgid "Default DK Express account"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:1720
+#: admin/class-dkexpress-for-woocommerce-admin.php:1781
 msgid "Default print size"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:1736
+#: admin/class-dkexpress-for-woocommerce-admin.php:1797
 msgid "Default weight (kg)"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:1740
+#: admin/class-dkexpress-for-woocommerce-admin.php:1801
 msgid "Default weight per item (kg)"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:1747
+#: admin/class-dkexpress-for-woocommerce-admin.php:1808
 msgid "Shipping"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:1750
+#: admin/class-dkexpress-for-woocommerce-admin.php:1811
 msgid "Disable volumetric"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:1753
+#: admin/class-dkexpress-for-woocommerce-admin.php:1814
 msgid "Disable volumetric weight calculation"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:1756
+#: admin/class-dkexpress-for-woocommerce-admin.php:1817
 msgid "Disable on specific Payment Gateways"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:1771
+#: admin/class-dkexpress-for-woocommerce-admin.php:1832
 msgid "Disable on specific Shipping Methods"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:1806
+#: admin/class-dkexpress-for-woocommerce-admin.php:1864
+msgid "Same-day delivery shipping methods (051)"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1875
+msgid "Attica postcodes outside the DK Express network"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1882
 msgid "Advanced"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:1809
+#: admin/class-dkexpress-for-woocommerce-admin.php:1885
 msgid "Debug"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:1812
+#: admin/class-dkexpress-for-woocommerce-admin.php:1888
 msgid "Debug mode logs every request made"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:1826
-#: admin/class-dkexpress-for-woocommerce-admin.php:1833
+#: admin/class-dkexpress-for-woocommerce-admin.php:1902
+#: admin/class-dkexpress-for-woocommerce-admin.php:1909
 msgid "Export Orders"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:1830
+#: admin/class-dkexpress-for-woocommerce-admin.php:1906
 msgid "Export"
 msgstr ""
 
-#: admin/class-dkexpress-for-woocommerce-admin.php:1835
+#: admin/class-dkexpress-for-woocommerce-admin.php:1911
 msgid ""
 "Please install Web Expert WooCommerce Order Tracking in order to enable "
 "exporter."

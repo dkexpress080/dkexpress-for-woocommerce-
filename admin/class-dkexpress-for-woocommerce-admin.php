@@ -72,6 +72,41 @@ class DKExpress_For_Woocommerce_Admin {
 	}
 
 	/**
+	 * DK Express basic service for a destination, as DK Express defines it:
+	 * 111 inside Attica (their own network), 051 instead of 111 for same-day delivery,
+	 * 211 everywhere else (delivered through ACS). Attica = Greek postcodes 1xxxx,
+	 * minus the ones the shop lists as outside the DK Express network.
+	 */
+	public static function auto_basic_service( $order, $country, $postcode ) {
+		$zip    = preg_replace( '/\D/', '', (string) $postcode );
+		$attica = 'GR' === strtoupper( (string) $country ) && 5 === strlen( $zip ) && '1' === $zip[0];
+		if ( $attica ) {
+			foreach ( preg_split( '/[\s,;]+/', (string) get_option( 'dkexpress_off_network_postcodes', '' ), -1, PREG_SPLIT_NO_EMPTY ) as $prefix ) {
+				$prefix = preg_replace( '/\D/', '', $prefix );
+				if ( '' !== $prefix && 0 === strpos( $zip, $prefix ) ) {
+					$attica = false;
+					break;
+				}
+			}
+		}
+
+		$service = '211';
+		if ( $attica ) {
+			$service  = '111';
+			$same_day = (array) get_option( 'dkexpress_same_day_shipping', [] );
+			if ( $same_day && $order ) {
+				foreach ( $order->get_items( 'shipping' ) as $item ) {
+					if ( in_array( $item->get_method_id() . ':' . $item->get_instance_id(), $same_day, true ) || in_array( $item->get_method_id(), $same_day, true ) ) {
+						$service = '051';
+						break;
+					}
+				}
+			}
+		}
+		return (string) apply_filters( 'dkexpress_basic_service', $service, $order, $country, $postcode );
+	}
+
+	/**
 	 * Public tracking page on dkexpresscourier.gr.
 	 */
 	public static function tracking_url( $voucher ) {
@@ -1119,8 +1154,12 @@ class DKExpress_For_Woocommerce_Admin {
 			$data['Requestor'] = [ 'Code' => $requestor_code ];
 			$data['Shipper']   = [ 'Code' => $requestor_code ];
 		}
+		// A code typed on the account wins; otherwise pick it from the destination (the API does not).
 		$basic_services = (array) get_option( 'dkexpress_basic_service', [] );
 		$basic_service  = trim( (string) ( $basic_services[ $cc_account ] ?? '' ) );
+		if ( '' === $basic_service ) {
+			$basic_service = self::auto_basic_service( $order, $country, $data['Consignee']['ZipCode'] );
+		}
 		if ( '' !== $basic_service ) {
 			$data['BasicService'] = $basic_service;
 		}
@@ -1617,6 +1656,8 @@ class DKExpress_For_Woocommerce_Admin {
 		register_setting( 'dkexpress-settings-group', 'dkexpress_default_weight_per_item' );
 		register_setting( 'dkexpress-settings-group', 'dkexpress_disable_on_payments' );
 		register_setting( 'dkexpress-settings-group', 'dkexpress_disable_on_shipping' );
+		register_setting( 'dkexpress-settings-group', 'dkexpress_same_day_shipping' );
+		register_setting( 'dkexpress-settings-group', 'dkexpress_off_network_postcodes', [ 'sanitize_callback' => 'sanitize_text_field' ] );
 		register_setting( 'dkexpress-settings-group', 'dkexpress_debug' );
 		register_setting( 'dkexpress-settings-group', 'dkexpress_disable_dimensions_volumetric' );
 		register_setting( 'dkexpress-settings-group' ,'dkexpress_default_account');
@@ -1818,6 +1859,21 @@ class DKExpress_For_Woocommerce_Admin {
 										<?php } ?>
 									</select>
 								</td>
+							</tr>
+							<tr valign="top">
+								<th scope="row"><label for="dkexpress_same_day_shipping"><?php _e('Same-day delivery shipping methods (051)', $this->plugin_name);?></label></th>
+								<td>
+									<?php $dkexpress_same_day_shipping = (array) get_option( 'dkexpress_same_day_shipping', [] ); ?>
+									<select id="dkexpress_same_day_shipping" name="dkexpress_same_day_shipping[]" multiple>
+										<?php foreach ( $methods as $k => $method ) { ?>
+											<option value="<?php echo esc_attr( $k ); ?>" <?php selected( in_array( $k, $dkexpress_same_day_shipping, true ) ); ?>><?php echo esc_html( $method ); ?></option>
+										<?php } ?>
+									</select>
+								</td>
+							</tr>
+							<tr valign="top">
+								<th scope="row"><label for="dkexpress_off_network_postcodes"><?php _e('Attica postcodes outside the DK Express network', $this->plugin_name);?></label></th>
+								<td><input type="text" id="dkexpress_off_network_postcodes" name="dkexpress_off_network_postcodes" class="regular-text" placeholder="18010, 18020" value="<?php echo esc_attr( get_option( 'dkexpress_off_network_postcodes', '' ) ); ?>" /></td>
 							</tr>
 						</table>
 					</div>

@@ -5,7 +5,7 @@ Requires at least: 5.8
 Tested up to: 6.9.4
 WC tested up to: 10.7.0
 Requires PHP: 7.4
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,11 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 * `[dkexpress_track_checkpoints order_id="123"]` — ιστορικό σταδίων αποστολής
 
 == Changelog ==
+
+= 1.0.2 =
+* Νέο: Αυτόματη επιλογή υπηρεσίας από τον ΤΚ (111 Αττική, 211 υπόλοιπη Ελλάδα και Κύπρος)
+* Νέο: Υπηρεσία αυθημερόν (051) για τους τρόπους αποστολής που επιλέγετε
+* Νέο: Ρύθμιση για ΤΚ Αττικής εκτός δικτύου DK Express
 
 = 1.0.1 =
 * Διόρθωση: Η ημερομηνία παράδοσης σε αντικαταβολές είναι πλέον η παράδοση και όχι η απόδοση του ποσού

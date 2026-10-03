@@ -42,6 +42,9 @@
         if (jQuery('#dkexpress_disable_on_shipping').length)
             jQuery('#dkexpress_disable_on_shipping').select2();
 
+        if (jQuery('#dkexpress_same_day_shipping').length)
+            jQuery('#dkexpress_same_day_shipping').select2();
+
         jQuery( function($) {
             var from = $('input[name="mishaDateFrom"]'),
                 to = $('input[name="mishaDateTo"]');
