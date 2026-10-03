@@ -368,8 +368,7 @@ msgstr "Η παραγγελία δεν έχει voucher DK Express."
 #: admin/class-dkexpress-for-woocommerce-admin.php:1080
 #, php-format
 msgid "This order already has voucher %s. Cancel it first to issue a new one."
-msgstr ""
-"Η παραγγελία έχει ήδη το voucher %s. Ακυρώστε το πρώτα για να εκδώσετε νέο."
+msgstr "Η παραγγελία έχει ήδη το voucher %s. Ακυρώστε το πρώτα για να εκδώσετε νέο."
 
 #: admin/class-dkexpress-for-woocommerce-admin.php:1189
 msgid "DK Express did not return a shipment number."
@@ -460,7 +459,7 @@ msgstr "Προκαθορισμένο βάρος (kg)"
 
 #: admin/class-dkexpress-for-woocommerce-admin.php:1801
 msgid "Default weight per item (kg)"
-msgstr "Προκαθορισμένο βάρος ανά δέμα (kg)"
+msgstr "Προκαθορισμένο βάρος ανά προϊόν (kg)"
 
 #: admin/class-dkexpress-for-woocommerce-admin.php:1808
 msgid "Shipping"
@@ -476,11 +475,11 @@ msgstr "Απενεργοποίηση υπολογισμού ογκομετρικ
 
 #: admin/class-dkexpress-for-woocommerce-admin.php:1817
 msgid "Disable on specific Payment Gateways"
-msgstr "Απενεργοποίηση έκδοσης σε συγκεκριμένους μεθόδους πληρωμής"
+msgstr "Απενεργοποίηση έκδοσης σε συγκεκριμένους τρόπους πληρωμής"
 
 #: admin/class-dkexpress-for-woocommerce-admin.php:1832
 msgid "Disable on specific Shipping Methods"
-msgstr "Απενεργοποίηση έκδοσης σε επιλεγμένες συγκεκριμένους αποστολής"
+msgstr "Απενεργοποίηση έκδοσης σε συγκεκριμένους τρόπους αποστολής"
 
 #: admin/class-dkexpress-for-woocommerce-admin.php:1864
 msgid "Same-day delivery shipping methods (051)"
@@ -500,9 +499,7 @@ msgstr "Αποσφαλμάτωση"
 
 #: admin/class-dkexpress-for-woocommerce-admin.php:1888
 msgid "Debug mode logs every request made"
-msgstr ""
-"Η λειτουργία εντοπισμού σφαλμάτων καταγράφει κάθε αίτημα που υποβάλλεται "
-"προς την DK Express"
+msgstr "Καταγραφή κάθε κλήσης προς τη DK Express"
 
 #: admin/class-dkexpress-for-woocommerce-admin.php:1902
 #: admin/class-dkexpress-for-woocommerce-admin.php:1909
@@ -569,8 +566,7 @@ msgstr "Απαιτείται άδεια χρήσης"
 
 #: includes/class-wx-courier-metabox-ux.php:569
 msgid "Activate your license to use this feature."
-msgstr ""
-"Ενεργοποιήστε την άδεια χρήσης σας για να ξεκλειδώσετε αυτή την καρτέλα."
+msgstr "Ενεργοποιήστε την άδεια χρήσης για να χρησιμοποιήσετε αυτή τη λειτουργία."
 
 #: includes/class-wx-courier-metabox-ux.php:570
 msgid "Activate"
@@ -769,9 +765,7 @@ msgstr "Το voucher ακυρώθηκε."
 
 #: includes/class-wx-courier-metabox-ux.php:1119
 msgid "Job reset. The voucher, if any, still exists at the courier."
-msgstr ""
-"Η εργασία επαναφέρθηκε. Το voucher, αν υπάρχει, παραμένει ενεργό στην "
-"courier."
+msgstr "Η εργασία επαναφέρθηκε. Το voucher, αν υπάρχει, παραμένει ενεργό στη μεταφορική."
 
 #: includes/class-wx-courier-metabox-ux.php:1120
 #, php-format
@@ -780,9 +774,7 @@ msgstr "Να ακυρωθεί το voucher %s στην courier; Η ετικέτ�
 
 #: includes/class-wx-courier-metabox-ux.php:1121
 msgid "Reset the voucher process for this order? This only clears local data."
-msgstr ""
-"Να γίνει επαναφορά της διαδικασίας voucher για αυτή την παραγγελία; "
-"Διαγράφονται μόνο τα τοπικά δεδομένα."
+msgstr "Να γίνει επαναφορά της διαδικασίας voucher για αυτή την παραγγελία; Διαγράφονται μόνο τα τοπικά δεδομένα."
 
 #: includes/class-wx-courier-metabox-ux.php:1122
 msgid "Label opened in a new tab."
@@ -884,9 +876,7 @@ msgstr "%1$s: το voucher %2$s ακυρώθηκε."
 #: includes/class-wx-courier-metabox-ux.php:1502
 #, php-format
 msgid "%1$s job reset locally. Voucher %2$s was not cancelled at the courier."
-msgstr ""
-"%1$s: η εργασία επαναφέρθηκε τοπικά. Το voucher %2$s δεν ακυρώθηκε στην "
-"courier."
+msgstr "%1$s: η εργασία επαναφέρθηκε τοπικά. Το voucher %2$s δεν ακυρώθηκε στη μεταφορική."
 
 #: includes/class-wx-courier-metabox-ux.php:1504
 msgid "Job reset."
