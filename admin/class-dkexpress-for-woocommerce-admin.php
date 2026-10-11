@@ -327,7 +327,18 @@ class DKExpress_For_Woocommerce_Admin {
 				'supports'     => ['title'],
 				'map_meta_cap' => true,
 				'capabilities' => array(
+					// Shop staff only (manage_woocommerce), like the other Web Expert screens: the list shows customers, vouchers and tracking.
 					'create_posts' => false,
+					'edit_posts' => 'manage_woocommerce',
+					'edit_others_posts' => 'manage_woocommerce',
+					'edit_published_posts' => 'manage_woocommerce',
+					'edit_private_posts' => 'manage_woocommerce',
+					'publish_posts' => 'manage_woocommerce',
+					'read_private_posts' => 'manage_woocommerce',
+					'delete_posts' => 'manage_woocommerce',
+					'delete_others_posts' => 'manage_woocommerce',
+					'delete_published_posts' => 'manage_woocommerce',
+					'delete_private_posts' => 'manage_woocommerce',
 				)
 			]
 		);
