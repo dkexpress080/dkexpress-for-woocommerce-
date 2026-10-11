@@ -1045,7 +1045,14 @@ class WX_Courier_Metabox_UX_1 {
 			if ( is_array( $s ) && $s ) {
 				$labels = array();
 				foreach ( $s as $code ) {
-					$labels[] = isset( $f['services']['options'][ $code ] ) ? $f['services']['options'][ $code ] : $code;
+					if ( isset( $f['services']['options'][ $code ] ) ) {
+						$labels[] = $f['services']['options'][ $code ];
+					} elseif ( ! empty( $f['services']['checkbox'] ) && (string) ( $f['services']['checkbox_value'] ?? '1' ) === (string) $code ) {
+						// Checkbox service stored as a one-element array (Speedex Saturday).
+						$labels[] = $f['services']['checkbox'];
+					} else {
+						$labels[] = $code;
+					}
 				}
 				$parts[] = implode( ', ', $labels );
 			} elseif ( ! is_array( $s ) && '1' === (string) $s && ! empty( $f['services']['checkbox'] ) ) {
