@@ -145,11 +145,20 @@ class DKExpress_For_Woocommerce_Admin {
 	}
 
 	/**
+	 * API base: the UAT host while test mode is on, production otherwise.
+	 * A job keeps the host it was issued on; jobs from before test mode existed are production.
+	 */
+	public static function api_url( $job_id = null ) {
+		$uat = $job_id ? '1' === get_post_meta( $job_id, 'dkexpress_test_mode', true ) : '1' === (string) get_option( 'dkexpress_test_mode' );
+		return $uat ? DKEXPRESS_UAT_API_URL : DKEXPRESS_API_URL;
+	}
+
+	/**
 	 * POST to the DK Express (Qualco) API.
 	 *
 	 * @return array|WP_Error Decoded response on Result=Success, WP_Error carrying the API's own messages otherwise.
 	 */
-	public static function api( $endpoint, array $body ) {
+	public static function api( $endpoint, array $body, $job_id = null ) {
 		$debug = get_option( 'dkexpress_debug', null ) == '1';
 		if ( $debug ) {
 			$logged = $body;
@@ -157,7 +166,7 @@ class DKExpress_For_Woocommerce_Admin {
 			wc_get_logger()->info( $endpoint . ' ' . wp_json_encode( $logged, JSON_UNESCAPED_UNICODE ), array( 'source' => 'dkexpress-for-woocommerce' ) );
 		}
 
-		$response = wp_remote_post( DKEXPRESS_API_URL . $endpoint, array(
+		$response = wp_remote_post( self::api_url( $job_id ) . $endpoint, array(
 			'headers' => array( 'Content-Type' => 'application/json; charset=utf-8' ),
 			'body'    => wp_json_encode( $body ),
 			'timeout' => 30,
@@ -565,7 +574,7 @@ class DKExpress_For_Woocommerce_Admin {
 				'note'     => __( 'Return labels are issued together with the outbound voucher.', $td ),
 				'print'    => function ( $order, $job_id, $number ) use ( $td ) {
 					$type = (string) get_option( 'dkexpress_default_print_size', 'pdf' ) ?: 'pdf';
-					$r    = self::api( 'Voucher', array( 'Context' => self::job_context( $job_id ), 'ShipmentNumber' => $number, 'Template' => $type ) );
+					$r    = self::api( 'Voucher', array( 'Context' => self::job_context( $job_id ), 'ShipmentNumber' => $number, 'Template' => $type ), $job_id );
 					if ( is_wp_error( $r ) ) { return $r; }
 					if ( empty( $r['Voucher'] ) ) { return new WP_Error( 'qualco_print', __( 'No label returned.', $td ) ); }
 					return array( 'base64' => $r['Voucher'] );
@@ -910,7 +919,7 @@ class DKExpress_For_Woocommerce_Admin {
                 'Context'        => self::job_context( $first_job ),
                 'ShipmentNumber' => implode( ',', $vouchers_to_print ),
                 'Template'       => $print_type,
-            ] );
+            ], $first_job );
 
             if ( ! is_wp_error( $apiResponse ) && ! empty( $apiResponse['Voucher'] ) ) {
                 $file = wp_upload_bits(date_i18n('dmY-His').".pdf", null, base64_decode($apiResponse['Voucher']) );
@@ -972,7 +981,7 @@ class DKExpress_For_Woocommerce_Admin {
 			'Context'        => self::job_context( $job_id ),
 			'ShipmentNumber' => $voucher_id,
 			'Template'       => $print_type,
-		] );
+		], $job_id );
 
 		if ( is_wp_error( $apiResponse ) ) {
 			wp_send_json_error( $apiResponse->get_error_message() );
@@ -1036,7 +1045,7 @@ class DKExpress_For_Woocommerce_Admin {
 		$apiResponse = self::api( 'Shipment/Void', [
 			'Context'        => self::job_context( $job_id ),
 			'ShipmentNumber' => $shipment_number,
-		] );
+		], $job_id );
 		// Already cancelled at DK Express (e.g. from their portal): just catch up locally.
 		$already = is_wp_error( $apiResponse ) && in_array( 'ShipmentAlreadyCancelled', array_column( (array) ( $apiResponse->get_error_data()['Errors'] ?? [] ), 'Code' ), true );
 		if ( is_wp_error( $apiResponse ) && ! $already ) {
@@ -1216,6 +1225,7 @@ class DKExpress_For_Woocommerce_Admin {
 		update_post_meta($post_id, 'dkexpress_username', $context['UserAlias']);
 		update_post_meta($post_id, 'dkexpress_password', $context['CredentialValue']);
 		update_post_meta($post_id, 'dkexpress_api',      $context['ApiKey']);
+		update_post_meta($post_id, 'dkexpress_test_mode', '1' === (string) get_option('dkexpress_test_mode') ? '1' : '0');
 		$order->update_meta_data( 'dkexpress_account', $cc_account);
 		$order->update_meta_data('_webexpert_order_tracking_carrier', 'dkexpress');
 		$order->update_meta_data('we_voucher_job_id', $post_id);
@@ -1445,7 +1455,7 @@ class DKExpress_For_Woocommerce_Admin {
 		$apiResponse = self::api( 'Tracking', [
 			'Context'    => $context,
 			'Identifier' => $voucher_no,
-		] );
+		], $job_id );
 		if ( is_wp_error( $apiResponse ) ) {
 			return [];
 		}
@@ -1658,6 +1668,7 @@ class DKExpress_For_Woocommerce_Admin {
 		register_setting( 'dkexpress-settings-group', 'dkexpress_disable_on_shipping' );
 		register_setting( 'dkexpress-settings-group', 'dkexpress_same_day_shipping' );
 		register_setting( 'dkexpress-settings-group', 'dkexpress_off_network_postcodes', [ 'sanitize_callback' => 'sanitize_text_field' ] );
+		register_setting( 'dkexpress-settings-group', 'dkexpress_test_mode' );
 		register_setting( 'dkexpress-settings-group', 'dkexpress_debug' );
 		register_setting( 'dkexpress-settings-group', 'dkexpress_disable_dimensions_volumetric' );
 		register_setting( 'dkexpress-settings-group' ,'dkexpress_default_account');
@@ -1881,6 +1892,12 @@ class DKExpress_For_Woocommerce_Admin {
 					<div class="dkexpress-section">
 						<h2 class="dkexpress-section-title"><?php _e('Advanced', $this->plugin_name); ?></h2>
 						<table class="form-table">
+							<tr>
+								<th scope="row"><?php _e('Test mode', $this->plugin_name);?></th>
+								<td><label for="dkexpress_test_mode">
+										<input name="dkexpress_test_mode" type="checkbox" id="dkexpress_test_mode" value="1" <?php checked( get_option('dkexpress_test_mode'), 1 ); ?>>
+										<?php _e('Activate test mode', $this->plugin_name);?></label></td>
+							</tr>
 							<tr>
 								<th scope="row"><?php _e('Debug', $this->plugin_name);?></th>
 								<td><label for="dkexpress_debug">

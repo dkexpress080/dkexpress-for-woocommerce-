@@ -6,7 +6,7 @@
  * Plugin Name:       DK Express for WooCommerce
  * Plugin URI:        https://www.dkexpresscourier.gr/
  * Description:       Issue, print, cancel and track DK Express vouchers from the WooCommerce order screen.
- * Version:           1.0.3
+ * Version:           1.0.4
  * Requires at least: 5.8
  * Requires PHP:      7.4
  * Requires Plugins:  woocommerce
@@ -24,8 +24,9 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-define( 'DKEXPRESS_FOR_WOOCOMMERCE_VERSION', '1.0.3' );
+define( 'DKEXPRESS_FOR_WOOCOMMERCE_VERSION', '1.0.4' );
 define( 'DKEXPRESS_API_URL', 'https://dk-prod.qualco.eu/dkservice/api/' );
+define( 'DKEXPRESS_UAT_API_URL', 'https://dk-uat.qualco.eu/dkservice/api/' );
 
 /**
  * Updates from DK Express's GitHub: the latest release (tag vX.Y.Z), preferring an attached

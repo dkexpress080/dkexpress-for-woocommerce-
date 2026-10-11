@@ -487,6 +487,14 @@ msgstr ""
 msgid "Advanced"
 msgstr ""
 
+#: admin/class-dkexpress-for-woocommerce-admin.php:1896
+msgid "Test mode"
+msgstr ""
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1899
+msgid "Activate test mode"
+msgstr ""
+
 #: admin/class-dkexpress-for-woocommerce-admin.php:1885
 msgid "Debug"
 msgstr ""

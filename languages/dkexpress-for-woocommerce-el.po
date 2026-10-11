@@ -493,6 +493,14 @@ msgstr "ΤΚ Αττικής εκτός δικτύου DK Express"
 msgid "Advanced"
 msgstr "Προηγμένες ρυθμίσεις"
 
+#: admin/class-dkexpress-for-woocommerce-admin.php:1896
+msgid "Test mode"
+msgstr "Δοκιμαστικό περιβάλλον"
+
+#: admin/class-dkexpress-for-woocommerce-admin.php:1899
+msgid "Activate test mode"
+msgstr "Ενεργοποίηση δοκιμαστικής λειτουργίας"
+
 #: admin/class-dkexpress-for-woocommerce-admin.php:1885
 msgid "Debug"
 msgstr "Αποσφαλμάτωση"
