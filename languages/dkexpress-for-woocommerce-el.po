@@ -902,3 +902,9 @@ msgstr "Αριθμός voucher"
 #: public/class-dkexpress-for-woocommerce-public.php:45
 msgid "Track"
 msgstr "Αναζήτηση"
+
+msgid "Customer Phone Field"
+msgstr "Πεδίο τηλεφώνου πελάτη"
+
+msgid "Order meta key(s), comma separated, tried before the shipping and billing phone."
+msgstr "Meta key(s) παραγγελίας, χωρισμένα με κόμμα· ελέγχονται πριν από το τηλέφωνο αποστολής και χρέωσης."

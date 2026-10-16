@@ -1141,9 +1141,8 @@ class DKExpress_For_Woocommerce_Admin {
 			];
 		}
 
-		$phone = $order->get_shipping_phone() ? $order->get_shipping_phone() : $order->get_billing_phone();
-		$billing_cellphone = !empty($order->get_meta('billing_cellphone')) ? $order->get_meta('billing_cellphone') : $order->get_billing_phone();
-		$cellphone = !empty($order->get_meta('shipping_phone')) ? $order->get_meta('shipping_phone') : $billing_cellphone;
+		$phone     = WebExpert_DKExpress_Recipient_Phone::phone( $order );
+		$cellphone = WebExpert_DKExpress_Recipient_Phone::mobile( $order );
 
 		$data = [
 			'Context'      => $context,
@@ -1671,6 +1670,7 @@ class DKExpress_For_Woocommerce_Admin {
 		register_setting( 'dkexpress-settings-group', 'dkexpress_requestor_code' );
 		register_setting( 'dkexpress-settings-group', 'dkexpress_basic_service' );
 		register_setting( 'dkexpress-settings-group', 'dkexpress_default_weight' );
+		register_setting( 'dkexpress-settings-group', 'dkexpress_phone_meta_keys', [ 'sanitize_callback' => [ 'WebExpert_DKExpress_Recipient_Phone', 'sanitize' ] ] );
 		register_setting( 'dkexpress-settings-group', 'dkexpress_auto_issue_upon_complete' );
 		register_setting( 'dkexpress-settings-group', 'dkexpress_default_print_size' );
 		register_setting( 'dkexpress-settings-group', 'dkexpress_improved_ux' );
@@ -1818,6 +1818,11 @@ class DKExpress_For_Woocommerce_Admin {
 							<tr valign="top">
 								<th scope="row"><label for="dkexpress_default_weight"><?php _e('Default weight (kg)', $this->plugin_name);?></label></th>
 								<td><input type="text" placeholder="0.5" id="dkexpress_default_weight" name="dkexpress_default_weight" class="regular-text" value="<?php echo esc_attr( get_option('dkexpress_default_weight') ); ?>" /></td>
+							</tr>
+							<tr valign="top">
+								<th scope="row"><label for="dkexpress_phone_meta_keys"><?php _e( 'Customer Phone Field', $this->plugin_name ); ?></label></th>
+								<td><input type="text" placeholder="_billing_mobile_phone" id="dkexpress_phone_meta_keys" name="dkexpress_phone_meta_keys" class="regular-text" value="<?php echo esc_attr( get_option( 'dkexpress_phone_meta_keys' ) ); ?>" />
+								<p class="description"><?php _e( 'Order meta key(s), comma separated, tried before the shipping and billing phone.', $this->plugin_name ); ?></p></td>
 							</tr>
 							<tr valign="top">
 								<th scope="row"><label for="dkexpress_default_weight_per_item"><?php _e('Default weight per item (kg)', $this->plugin_name);?></label></th>

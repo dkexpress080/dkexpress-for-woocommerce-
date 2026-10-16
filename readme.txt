@@ -5,7 +5,7 @@ Requires at least: 5.8
 Tested up to: 6.9.4
 WC tested up to: 10.7.0
 Requires PHP: 7.4
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -46,6 +46,10 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 * `[dkexpress_track_checkpoints order_id="123"]` — ιστορικό σταδίων αποστολής
 
 == Changelog ==
+
+= 1.0.7 =
+* Νέο: Ρύθμιση «Πεδίο τηλεφώνου πελάτη» για τηλέφωνο από δικό σας πεδίο παραγγελίας
+* Νέο: Χρήση του κινητού από το WebExpert SMS όταν είναι ενεργό το πεδίο κινητού
 
 = 1.0.6 =
 * Διόρθωση ασφαλείας: Η λίστα Εργασιών μόνο για διαχειριστές καταστήματος
