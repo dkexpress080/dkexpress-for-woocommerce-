@@ -107,10 +107,18 @@ class DKExpress_For_Woocommerce_Admin {
 	}
 
 	/**
-	 * Public tracking page on dkexpresscourier.gr.
+	 * Public tracking page on dkexpresscourier.gr for one voucher, or several (array or comma-separated).
 	 */
 	public static function tracking_url( $voucher ) {
-		return 'https://www.dkexpresscourier.gr/el/courier/voucher/%CE%91%CE%BD%CE%B1%CE%B6%CE%AE%CF%84%CE%B7%CF%83%CE%B7Voucher.html?r18p01=' . rawurlencode( (string) $voucher );
+		$vouchers = array_filter( array_map( 'trim', is_array( $voucher ) ? $voucher : explode( ',', (string) $voucher ) ), 'strlen' );
+		return DKEXPRESS_TRACKING_URL . '?voucher=' . implode( ',', array_map( 'rawurlencode', $vouchers ) );
+	}
+
+	/**
+	 * The same page with a {tracking_number} placeholder, for Order Tracking's own link builder.
+	 */
+	public static function tracking_url_template() {
+		return DKEXPRESS_TRACKING_URL . '?voucher={tracking_number}';
 	}
 
 	/**
@@ -572,7 +580,7 @@ class DKExpress_For_Woocommerce_Admin {
 				},
 				'noise'     => '',
 				'phrase'    => function ( $raw ) { return function_exists( 'we_shiplog_dkexpress_phrase' ) ? we_shiplog_dkexpress_phrase( $raw ) : $raw; },
-				'track_url' => function ( $voucher ) { return 'https://www.dkexpresscourier.gr/el/courier/voucher/%CE%91%CE%BD%CE%B1%CE%B6%CE%AE%CF%84%CE%B7%CF%83%CE%B7Voucher.html?r18p01=' . rawurlencode( $voucher ); },
+				'track_url' => function ( $voucher ) { return self::tracking_url( $voucher ); },
 			),
 			'cancel_for_order' => array( $this, 'dkexpress_cancel_voucher_for_order' ),
 			'track'            => function ( $order ) { $this->dkexpress_track( $order->get_id(), null ); },
@@ -1576,7 +1584,7 @@ class DKExpress_For_Woocommerce_Admin {
 			$job_id = $order->get_meta('we_voucher_job_id') ? $order->get_meta('we_voucher_job_id') : null;
 			$vendor=get_post_meta($job_id, 'we_voucher_job_provider', true);
 			if (apply_filters('webexpert_custom_vendor_field',$vendor,$order) == "dkexpress") {
-				return apply_filters('dkexpress_order_tracking_change_url','https://www.dkexpresscourier.gr/el/courier/voucher/%CE%91%CE%BD%CE%B1%CE%B6%CE%AE%CF%84%CE%B7%CF%83%CE%B7Voucher.html?r18p01={tracking_number}',$order);
+				return apply_filters('dkexpress_order_tracking_change_url',self::tracking_url_template(),$order);
 			}
 
 		}
@@ -1593,7 +1601,7 @@ class DKExpress_For_Woocommerce_Admin {
 			}
 			if (apply_filters('webexpert_custom_vendor_field',$vendor,$order) == "dkexpress") {
 				$actions['tracking'] = array(
-					'url'  => apply_filters('dkexpress_order_tracking_change_url','https://www.dkexpresscourier.gr/el/courier/voucher/%CE%91%CE%BD%CE%B1%CE%B6%CE%AE%CF%84%CE%B7%CF%83%CE%B7Voucher.html?r18p01='.$voucher_no,$order),
+					'url'  => apply_filters('dkexpress_order_tracking_change_url',self::tracking_url($voucher_no),$order),
 					'name' => __('Tracking', $this->plugin_name)
 				);
 			}

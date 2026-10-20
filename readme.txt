@@ -5,7 +5,7 @@ Requires at least: 5.8
 Tested up to: 6.9.4
 WC tested up to: 10.7.0
 Requires PHP: 7.4
-Stable tag: 1.0.7
+Stable tag: 1.0.8
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -46,6 +46,9 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 * `[dkexpress_track_checkpoints order_id="123"]` — ιστορικό σταδίων αποστολής
 
 == Changelog ==
+
+= 1.0.8 =
+* Αλλαγή: Τα links παρακολούθησης οδηγούν στη νέα σελίδα αναζήτησης αποστολής του dkexpresscourier.gr
 
 = 1.0.7 =
 * Νέο: Ρύθμιση «Πεδίο τηλεφώνου πελάτη» για τηλέφωνο από δικό σας πεδίο παραγγελίας

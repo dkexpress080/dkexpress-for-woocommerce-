@@ -4,14 +4,14 @@
  *
  * @wordpress-plugin
  * Plugin Name:       DK Express for WooCommerce
- * Plugin URI:        https://www.dkexpresscourier.gr/
+ * Plugin URI:        https://dkexpresscourier.gr/
  * Description:       Issue, print, cancel and track DK Express vouchers from the WooCommerce order screen.
- * Version:           1.0.7
+ * Version:           1.0.8
  * Requires at least: 5.8
  * Requires PHP:      7.4
  * Requires Plugins:  woocommerce
  * Author:            DK Express
- * Author URI:        https://www.dkexpresscourier.gr/
+ * Author URI:        https://dkexpresscourier.gr/
  * License:           GPLv2 or later
  * Text Domain:       dkexpress-for-woocommerce
  * Domain Path:       /languages
@@ -24,10 +24,12 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-define( 'DKEXPRESS_FOR_WOOCOMMERCE_VERSION', '1.0.7' );
+define( 'DKEXPRESS_FOR_WOOCOMMERCE_VERSION', '1.0.8' );
 
 require_once plugin_dir_path( __FILE__ ) . 'includes/class-dkexpress-recipient-phone.php';
 define( 'DKEXPRESS_API_URL', 'https://dk-prod.qualco.eu/dkservice/api/' );
+// Public tracking page; takes ?voucher=<number>, or several numbers comma-separated.
+define( 'DKEXPRESS_TRACKING_URL', 'https://dkexpresscourier.gr/anazitisi-apostolis/' );
 define( 'DKEXPRESS_UAT_API_URL', 'https://dk-uat.qualco.eu/dkservice/api/' );
 
 /**

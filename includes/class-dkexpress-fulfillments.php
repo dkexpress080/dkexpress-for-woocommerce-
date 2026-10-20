@@ -72,7 +72,7 @@ class DKExpress_Fulfillments {
 			$fulfillment->set_tracking_number( $tracking_number );
 			$fulfillment->set_shipment_provider( 'dkexpress' );
 			$fulfillment->set_tracking_url(
-				'https://www.dkexpresscourier.gr/el/courier/voucher/%CE%91%CE%BD%CE%B1%CE%B6%CE%AE%CF%84%CE%B7%CF%83%CE%B7Voucher.html?r18p01=' . $tracking_number
+				DKExpress_For_Woocommerce_Admin::tracking_url( $tracking_number )
 			);
 
 			$parcels = $order->get_meta( 'dkexpress_parcels' );
@@ -153,7 +153,7 @@ class DKExpress_Fulfillment_Shipping_Provider extends \Automattic\WooCommerce\Ad
 	}
 
 	public function get_tracking_url( string $tracking_number ): string {
-		return 'https://www.dkexpresscourier.gr/el/courier/voucher/%CE%91%CE%BD%CE%B1%CE%B6%CE%AE%CF%84%CE%B7%CF%83%CE%B7Voucher.html?r18p01=' . $tracking_number;
+		return DKExpress_For_Woocommerce_Admin::tracking_url( $tracking_number );
 	}
 
 	public function get_shipping_from_countries(): array {

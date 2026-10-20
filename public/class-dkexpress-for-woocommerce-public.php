@@ -39,9 +39,9 @@ class DKExpress_For_Woocommerce_Public {
 		// Standalone: search straight on dkexpresscourier.gr.
 		ob_start();
 		?>
-		<form class="dkexpress-track-form" method="get" target="_blank" action="https://www.dkexpresscourier.gr/el/courier/voucher/%CE%91%CE%BD%CE%B1%CE%B6%CE%AE%CF%84%CE%B7%CF%83%CE%B7Voucher.html">
+		<form class="dkexpress-track-form" method="get" target="_blank" action="<?php echo esc_url( DKEXPRESS_TRACKING_URL ); ?>">
 			<label for="dkexpress-track-voucher"><?php esc_html_e( 'Voucher number', $this->plugin_name ); ?></label>
-			<input type="text" id="dkexpress-track-voucher" name="r18p01" required>
+			<input type="text" id="dkexpress-track-voucher" name="voucher" required>
 			<button type="submit" class="button"><?php esc_html_e( 'Track', $this->plugin_name ); ?></button>
 		</form>
 		<?php
