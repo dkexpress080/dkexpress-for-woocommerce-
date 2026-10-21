@@ -107,6 +107,35 @@ class DKExpress_For_Woocommerce_Admin {
 	}
 
 	/**
+	 * A DK Express basic service code (111, 211, 051…), or '' for anything else. A depot name such as
+	 * "100-DKE-ΚΕΝΤΡΙΚΟ" typed here would otherwise override the automatic choice and DK Express drops it.
+	 */
+	public static function clean_service_code( $code ) {
+		$code = trim( (string) $code );
+		return preg_match( '/^\d{2,4}$/', $code ) ? $code : '';
+	}
+
+	/**
+	 * Accounts tab: keep only real service codes, empty = automatic.
+	 */
+	public function sanitize_service_codes( $codes ) {
+		$out     = [];
+		$dropped = [];
+		foreach ( (array) $codes as $i => $code ) {
+			$clean    = self::clean_service_code( $code );
+			$out[ $i ] = $clean;
+			if ( '' === $clean && '' !== trim( (string) $code ) ) {
+				$dropped[] = trim( (string) $code );
+			}
+		}
+		if ( $dropped && function_exists( 'add_settings_error' ) ) {
+			/* translators: %s: the values that were removed */
+			add_settings_error( 'dkexpress_basic_service', 'dkexpress_basic_service', sprintf( __( 'Basic service code must be a number such as 111, 211 or 051. Removed: %s. The service is now chosen automatically.', $this->plugin_name ), implode( ', ', $dropped ) ) );
+		}
+		return $out;
+	}
+
+	/**
 	 * Public tracking page on dkexpresscourier.gr for one voucher, or several (array or comma-separated).
 	 */
 	public static function tracking_url( $voucher ) {
@@ -1183,7 +1212,7 @@ class DKExpress_For_Woocommerce_Admin {
 		}
 		// A code typed on the account wins; otherwise pick it from the destination (the API does not).
 		$basic_services = (array) get_option( 'dkexpress_basic_service', [] );
-		$basic_service  = trim( (string) ( $basic_services[ $cc_account ] ?? '' ) );
+		$basic_service  = self::clean_service_code( $basic_services[ $cc_account ] ?? '' );
 		if ( '' === $basic_service ) {
 			$basic_service = self::auto_basic_service( $order, $country, $data['Consignee']['ZipCode'] );
 		}
@@ -1676,7 +1705,7 @@ class DKExpress_For_Woocommerce_Admin {
 		register_setting( 'dkexpress-settings-group', 'dkexpress_password' );
 		register_setting( 'dkexpress-settings-group', 'dkexpress_api' );
 		register_setting( 'dkexpress-settings-group', 'dkexpress_requestor_code' );
-		register_setting( 'dkexpress-settings-group', 'dkexpress_basic_service' );
+		register_setting( 'dkexpress-settings-group', 'dkexpress_basic_service', [ 'sanitize_callback' => [ $this, 'sanitize_service_codes' ] ] );
 		register_setting( 'dkexpress-settings-group', 'dkexpress_default_weight' );
 		register_setting( 'dkexpress-settings-group', 'dkexpress_phone_meta_keys', [ 'sanitize_callback' => [ 'WebExpert_DKExpress_Recipient_Phone', 'sanitize' ] ] );
 		register_setting( 'dkexpress-settings-group', 'dkexpress_auto_issue_upon_complete' );
@@ -1759,7 +1788,7 @@ class DKExpress_For_Woocommerce_Admin {
 								</tr>
 								<tr valign="top">
 									<th scope="row"><label for="dkexpress_basic_service"><?php _e('Basic service code', $this->plugin_name);?></label></th>
-									<td><input type="text" id="dkexpress_basic_service" name="dkexpress_basic_service[]" class="regular-text" value="<?php echo esc_attr( ( (array) get_option('dkexpress_basic_service', []) )[$i] ?? '' ); ?>" /></td>
+									<td><input type="text" id="dkexpress_basic_service" name="dkexpress_basic_service[]" class="regular-text" inputmode="numeric" placeholder="<?php esc_attr_e( 'Automatic', $this->plugin_name ); ?>" value="<?php echo esc_attr( ( (array) get_option('dkexpress_basic_service', []) )[$i] ?? '' ); ?>" /></td>
 								</tr>
 							</table>
 						</div>

@@ -908,3 +908,10 @@ msgstr "Πεδίο τηλεφώνου πελάτη"
 
 msgid "Order meta key(s), comma separated, tried before the shipping and billing phone."
 msgstr "Meta key(s) παραγγελίας, χωρισμένα με κόμμα· ελέγχονται πριν από το τηλέφωνο αποστολής και χρέωσης."
+
+msgid "Automatic"
+msgstr "Αυτόματα"
+
+#, php-format
+msgid "Basic service code must be a number such as 111, 211 or 051. Removed: %s. The service is now chosen automatically."
+msgstr "Ο κωδικός βασικής υπηρεσίας πρέπει να είναι αριθμός, π.χ. 111, 211 ή 051. Αφαιρέθηκε: %s. Η υπηρεσία επιλέγεται πλέον αυτόματα."
