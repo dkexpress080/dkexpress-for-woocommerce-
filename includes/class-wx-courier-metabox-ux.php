@@ -1200,6 +1200,9 @@ class WX_Courier_Metabox_UX_1 {
 			'html'    => $this->box_html( $order ),
 			'chip'    => array( 'label' => $chip[0], 'class' => $chip[1] ),
 			'message' => $message,
+			// The page isn't reloaded, so the order form's Tracking number input still holds the old value
+			// and WooCommerce would save it back over the voucher on the next Update.
+			'tracking' => (string) $order->get_meta( '_shipping_tracking_number' ),
 		) );
 	}
 

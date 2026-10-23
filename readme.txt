@@ -5,7 +5,7 @@ Requires at least: 5.8
 Tested up to: 6.9.4
 WC tested up to: 10.7.0
 Requires PHP: 7.4
-Stable tag: 1.0.9
+Stable tag: 1.0.10
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -46,6 +46,9 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 * `[dkexpress_track_checkpoints order_id="123"]` — ιστορικό σταδίων αποστολής
 
 == Changelog ==
+
+= 1.0.10 =
+* Διόρθωση: Ο αριθμός αποστολής δεν σβήνει πλέον από την παραγγελία μετά από έκδοση voucher με το Improved UX
 
 = 1.0.9 =
 * Διόρθωση: Μη έγκυρη τιμή στον «Κωδικό βασικής υπηρεσίας» (π.χ. όνομα καταστήματος) δεν ακυρώνει πλέον την αυτόματη επιλογή 111/211

@@ -65,6 +65,8 @@
 		var $new = $(data.html);
 		$root.replaceWith($new);
 		$new.find('.wxmb-head').each(function () { applyHead($(this)); });
+		// Keep the order form's Tracking number in step, or Update saves the stale value over the voucher.
+		if (typeof data.tracking === 'string') { $('#_shipping_tracking_number').val(data.tracking); }
 		if (message) { notice($new, type || 'ok', message); }
 	}
 
