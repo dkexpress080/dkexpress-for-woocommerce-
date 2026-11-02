@@ -156,6 +156,9 @@ class WX_Courier_Metabox_UX_1 {
 			'noise'     => '',
 			'phrase'    => null,
 			'track_url' => null,
+			// A "returned" row whose folded status matches this is a return TO THE SENDER: any
+			// later "delivered" row is the parcel being handed back to the shop, not to the customer.
+			'return_final' => '/ΑΠΟΣΤΟΛΕ/u',
 		);
 		return $c;
 	}
@@ -372,10 +375,19 @@ class WX_Courier_Metabox_UX_1 {
 		$top_dt   = '';
 		$events   = array();
 		$last_non_noise = null;
+		$ret_final    = $this->c['tracking']['return_final'];
+		$sent_back    = false;
 
 		foreach ( $rows as $r ) {
 			$is_noise = $noise && preg_match( $noise, $this->fold( $r['status'] ) );
 			$ms       = is_callable( $ms_fn ) ? call_user_func( $ms_fn, $r ) : null;
+			if ( 'returned' === $ms && $ret_final && preg_match( $ret_final, $this->fold( $r['status'] ) ) ) {
+				$sent_back = true;
+			} elseif ( 'delivered' === $ms && $sent_back ) {
+				// «Επιστροφή στον αρχικό αποστολέα» → «Παράδοση αποστολής»: delivered back to the
+				// shop. Without this the newer "delivered" won by recency and a return read as Delivered.
+				$ms = null;
+			}
 			if ( $ms && isset( $order_ms[ $ms ] ) ) {
 				if ( ! isset( $reached[ $ms ] ) ) {
 					$reached[ $ms ] = $r['datetime'];
