@@ -42,7 +42,7 @@
 .wxmb-stepper { display: inline-flex; align-items: stretch; height: 30px; border: 1px solid #d0d5dd; border-radius: 4px; background: #fff; overflow: hidden; }
 .wxmb-stepper .wxmb-step { width: 28px; border: 0; background: #f6f7f7; color: #50575e; font-size: 15px; line-height: 1; cursor: pointer; padding: 0; }
 .wxmb-stepper .wxmb-step:hover { background: #eef0f2; color: #1d2327; }
-.wxmb-stepper input[type="number"] { width: 44px !important; padding: 0 4px !important; border: 0 !important; border-left: 1px solid #d0d5dd !important; border-right: 1px solid #d0d5dd !important; border-radius: 0 !important; text-align: center; -moz-appearance: textfield; box-shadow: none !important; }
+.wxmb-stepper input[type="number"] { width: 44px !important; padding: 0 4px !important; border: 0 !important; border-left: 1px solid #d0d5dd !important; border-right: 1px solid #d0d5dd !important; border-radius: 0 !important; height: auto !important; min-height: 0 !important; margin: 0 !important; line-height: normal !important; text-align: center; -moz-appearance: textfield; box-shadow: none !important; }
 .wxmb-stepper input[type="number"]::-webkit-outer-spin-button, .wxmb-stepper input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
 .wxmb-check { display: flex !important; gap: 8px; align-items: flex-start; cursor: pointer; color: #2c3338 !important; }
 .wxmb-check input { margin: 2px 0 0 !important; }
