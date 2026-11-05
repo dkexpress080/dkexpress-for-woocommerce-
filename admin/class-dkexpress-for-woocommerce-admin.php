@@ -935,6 +935,33 @@ class DKExpress_For_Woocommerce_Admin {
 		}
 	}
 
+	/**
+	 * Bulk print: one PDF streams inline; several render on one page as blob iframes.
+	 * Labels are never written to uploads: that needs a writable month folder and leaves
+	 * recipient name/address/phone at a public, guessable URL.
+	 */
+	private function output_bulk_pdfs( array $pdfs ) {
+		$pdfs = array_values( array_filter( $pdfs ) );
+		nocache_headers();
+		if ( 1 === count( $pdfs ) ) {
+			header( 'Content-Type: application/pdf' );
+			header( 'Content-Disposition: inline; filename="dkexpress-vouchers-' . gmdate( 'Ymd-His' ) . '.pdf"' );
+			header( 'Content-Length: ' . strlen( $pdfs[0] ) );
+			echo $pdfs[0]; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- binary PDF
+			return;
+		}
+		$back = wp_get_referer() ?: admin_url( 'edit.php?post_type=we_voucher_job' );
+		header( 'Content-Type: text/html; charset=utf-8' );
+		echo '<!doctype html><html><head><meta charset="utf-8"><title>DK Express</title>';
+		echo '<style>body{margin:0;font:14px sans-serif;background:#f0f0f1}a{display:inline-block;margin:12px}iframe{display:block;width:100%;height:92vh;border:0;border-top:1px solid #ccc}</style></head><body>';
+		echo '<a href="' . esc_url( $back ) . '">&larr; ' . esc_html__( 'Back', 'dkexpress-for-woocommerce' ) . '</a>';
+		echo '<div id="pdfs"></div><script>';
+		echo 'var p=' . wp_json_encode( array_map( 'base64_encode', $pdfs ) ) . ';';
+		echo 'p.forEach(function(b){var s=atob(b),a=new Uint8Array(s.length);for(var i=0;i<s.length;i++)a[i]=s.charCodeAt(i);';
+		echo 'var f=document.createElement("iframe");f.src=URL.createObjectURL(new Blob([a],{type:"application/pdf"}));document.getElementById("pdfs").appendChild(f);});';
+		echo '</script></body></html>';
+	}
+
 	function register_my_bulk_actions_handler($redirect, $doaction, $post_ids) {
 		$redirect = remove_query_arg( array( 'elta_jobs_cancelled','acs_jobs_cancelled','dkexpress_jobs_cancelled','dkexpress_jobs_print','dkexpress_jobs_print_error','dkexpress_jobs_cancel_errors' ), $redirect );
         $print_type = get_option('dkexpress_default_print_size','pdf');
@@ -970,16 +997,8 @@ class DKExpress_For_Woocommerce_Admin {
             ], $first_job );
 
             if ( ! is_wp_error( $apiResponse ) && ! empty( $apiResponse['Voucher'] ) ) {
-                $file = wp_upload_bits(date_i18n('dmY-His').".pdf", null, base64_decode($apiResponse['Voucher']) );
-                echo "<html><body>";
-                echo "<a id='trigger_me' target='_blank' href='".esc_url($file['url'])."'>".esc_html($file['url'])."</a>";
-                echo '<script>
-(function () {
-    window.open(document.getElementById("trigger_me").href, "_blank");
-    history.back(1);
-})();
-</script>';
-                echo "</body></html>";
+                // Streamed to the browser; never written to uploads (needs a writable month folder, public URL with recipient PII).
+                $this->output_bulk_pdfs( array( base64_decode( $apiResponse['Voucher'] ) ) );
                 exit;
             }
             set_transient( 'dkexpress_bulk_print_error_' . get_current_user_id(), is_wp_error( $apiResponse ) ? $apiResponse->get_error_message() : __( 'No label returned.', $this->plugin_name ), 60 );

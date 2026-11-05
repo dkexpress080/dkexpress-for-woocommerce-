@@ -132,7 +132,12 @@
 				if (typeof resp === 'string' && /^https?:\/\//.test(resp)) { urls = [resp]; }
 				break;
 			case 'success_base64':
+				// Labels come back as base64 and open as blobs; nothing is written to uploads.
 				if (resp && resp.success && resp.data && resp.data.Voucher) { openBase64(resp.data.Voucher, $root, c); return; }
+				if (resp && resp.success && resp.data && $.isArray(resp.data.Vouchers) && resp.data.Vouchers.length) {
+					$.each(resp.data.Vouchers, function (i, b64) { openBase64(b64, $root, c); });
+					return;
+				}
 				break;
 		}
 		if (urls.length) {
