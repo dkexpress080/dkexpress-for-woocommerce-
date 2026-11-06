@@ -5,7 +5,7 @@ Requires at least: 5.8
 Tested up to: 6.9.4
 WC tested up to: 10.7.0
 Requires PHP: 7.4
-Stable tag: 1.0.13
+Stable tag: 1.0.14
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -46,6 +46,9 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 * `[dkexpress_track_checkpoints order_id="123"]` — ιστορικό σταδίων αποστολής
 
 == Changelog ==
+
+= 1.0.14 =
+* Βελτίωση: Το voucher ανοίγει με τον αριθμό του και κουμπιά «Εκτύπωση» / «Λήψη PDF»
 
 = 1.0.13 =
 * Βελτίωση: Η μαζική εκτύπωση δεν αποθηκεύει πλέον voucher δημόσια στα uploads

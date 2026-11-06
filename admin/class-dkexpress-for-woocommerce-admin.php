@@ -625,7 +625,7 @@ class DKExpress_For_Woocommerce_Admin {
 					$r    = self::api( 'Voucher', array( 'Context' => self::job_context( $job_id ), 'ShipmentNumber' => $number, 'Template' => $type ), $job_id );
 					if ( is_wp_error( $r ) ) { return $r; }
 					if ( empty( $r['Voucher'] ) ) { return new WP_Error( 'qualco_print', __( 'No label returned.', $td ) ); }
-					return array( 'base64' => $r['Voucher'] );
+					return array( 'base64' => $r['Voucher'], 'filename' => 'DKExpress-return-' . $number . '.pdf' );
 				},
 			),
 			'asset_url'        => $asset_url,
@@ -1053,6 +1053,10 @@ class DKExpress_For_Woocommerce_Admin {
 		if ( is_wp_error( $apiResponse ) ) {
 			wp_send_json_error( $apiResponse->get_error_message() );
 			return;
+		}
+		if ( is_array( $apiResponse ) ) {
+			// Names the viewer tab and the downloaded file (wxPdf in the admin JS).
+			$apiResponse['Filename'] = sanitize_file_name( 'DKExpress-' . $voucher_id . '.pdf' );
 		}
 		wp_send_json_success( $apiResponse );
 	}

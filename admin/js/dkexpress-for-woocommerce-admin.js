@@ -1,11 +1,66 @@
 (function( $ ) {
 	'use strict';
 
+	/* wxPdf (shared, v2): a label opens as a named viewer page (Print / Download PDF), not a bare blob. Identical in every courier plugin. */
+	window.wxPdf = window.wxPdf || (function () {
+		var pages = {};
+		var el = /^el/i.test(document.documentElement.lang || '');
+		var T = el
+			? { print: 'Εκτύπωση', dl: 'Λήψη PDF', open: 'Άνοιγμα', blocked: 'Ο browser μπλόκαρε το νέο παράθυρο. Το voucher είναι έτοιμο:' }
+			: { print: 'Print', dl: 'Download PDF', open: 'Open', blocked: 'Your browser blocked the new window. The voucher is ready:' };
+		var I = {
+			print: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M6 9V3h12v6M6 18H4a1 1 0 0 1-1-1v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a1 1 0 0 1-1 1h-2M7 14h10v7H7z"/></svg>',
+			dl: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 3v12m-5-5 5 5 5-5M4 21h16"/></svg>',
+			open: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>'
+		};
+		var BTN = 'display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:0 14px;border-radius:4px;border:1px solid #2271b1;font:600 13px/1 -apple-system,Segoe UI,Roboto,sans-serif;text-decoration:none;cursor:pointer;white-space:nowrap';
+		function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return '&#' + c.charCodeAt(0) + ';'; }); }
+		function clean(n) {
+			n = String(n || 'voucher').replace(/[\\\/:*?"<>|\s]+/g, '-');
+			return /\.pdf$/i.test(n) ? n : n + '.pdf';
+		}
+		function url(b64, filename) {
+			var bin = atob(b64), len = bin.length, bytes = new Uint8Array(len);
+			for (var i = 0; i < len; i++) { bytes[i] = bin.charCodeAt(i); }
+			var pdf = URL.createObjectURL(new Blob([bytes], { type: 'application/pdf' }));
+			var name = clean(filename);
+			var html = '<!doctype html><html lang="' + (el ? 'el' : 'en') + '"><head><meta charset="utf-8"><title>' + esc(name) + '</title>' +
+				'<style>html,body{margin:0;height:100%;background:#525659;font:14px/1.4 -apple-system,"Segoe UI",Roboto,sans-serif}' +
+				'header{box-sizing:border-box;height:56px;display:flex;align-items:center;gap:10px;padding:0 16px;background:#fff;color:#1d2327;border-bottom:1px solid #c3c4c7}' +
+				'header b{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:15px}' +
+				'.b{' + BTN + '}.s{background:#fff;color:#2271b1}.p{background:#2271b1;color:#fff}' +
+				'.s:hover,.s:focus-visible{background:#f0f6fc}.p:hover,.p:focus-visible{background:#135e96;border-color:#135e96}' +
+				'.b:focus-visible{outline:2px solid #2271b1;outline-offset:2px}' +
+				'iframe{display:block;border:0;width:100%;height:calc(100% - 56px)}</style></head><body>' +
+				'<header><b>' + esc(name) + '</b>' +
+				'<a class="b s" href="' + pdf + '" download="' + esc(name) + '">' + I.dl + T.dl + '</a>' +
+				'<button class="b p" type="button" onclick="document.getElementById(\'wxpdf\').contentWindow.print()">' + I.print + T.print + '</button></header>' +
+				'<iframe id="wxpdf" src="' + pdf + '" title="' + esc(name) + '"></iframe></body></html>';
+			var page = URL.createObjectURL(new Blob([html], { type: 'text/html' }));
+			pages[page] = { pdf: pdf, name: name };
+			return page;
+		}
+		/* Popup-blocked notice body (message + Open / Download PDF buttons) for a page from url(); '' for any other URL. */
+		function blocked(page) {
+			var p = pages[page];
+			if (!p) { return ''; }
+			return '<span style="display:block">' + T.blocked + '</span>' +
+				'<span style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px">' +
+				'<a href="' + page + '" target="_blank" style="' + BTN + ';min-height:30px;padding:0 10px;font-size:12px;background:#2271b1;color:#fff">' + I.open + T.open + '</a>' +
+				'<a href="' + p.pdf + '" download="' + esc(p.name) + '" style="' + BTN + ';min-height:30px;padding:0 10px;font-size:12px;background:#fff;color:#2271b1">' + I.dl + T.dl + '</a>' +
+				'</span>';
+		}
+		/* Box for the classic metaboxes (WordPress warning style). */
+		var BOX = 'display:block;margin-top:10px;padding:10px 12px;background:#fff;border:1px solid #c3c4c7;border-left:4px solid #dba617;border-radius:4px;font-size:12.5px;line-height:1.45;color:#1d2327';
+		return { url: url, blocked: blocked, box: BOX };
+	})();
+
 	function safeOpen(url, $context) {
 		var w = window.open(url, '_blank');
 		if (!w || w.closed || typeof w.closed === 'undefined') {
 			$context.closest('.webexpert-field-group, .webexpert-field').find('.dkexpress-popup-notice').remove();
-			var notice = $('<div class="dkexpress-popup-notice">' +
+			var body = window.wxPdf.blocked(url);
+			var notice = body ? $('<div class="dkexpress-popup-notice" style="' + window.wxPdf.box + '">' + body + '</div>') : $('<div class="dkexpress-popup-notice">' +
 				'<span class="dashicons dashicons-warning"></span> ' +
 				dkexpress_ajax_object.popup_blocked_msg +
 				' <a href="' + url + '" target="_blank">' +
@@ -81,16 +136,9 @@
 			})
 		});
 
-        function dkexpress_openPdf(base64Data, $context) {
-            var byteCharacters = atob(base64Data);
-            var byteNumbers = new Array(byteCharacters.length);
-            for (var i = 0; i < byteCharacters.length; i++) {
-                byteNumbers[i] = byteCharacters.charCodeAt(i);
-            }
-            var byteArray = new Uint8Array(byteNumbers);
-            var blob = new Blob([byteArray], {type: 'application/pdf'});
-            var blobUrl = URL.createObjectURL(blob);
-            safeOpen(blobUrl, $context);
+        // Labels open in a named viewer page (wxPdf) — nothing is written to uploads.
+        function dkexpress_openPdf(base64Data, $context, filename) {
+            safeOpen(window.wxPdf.url(base64Data, filename), $context);
         }
 
         $('.dkexpress_print_voucher_type1, .dkexpress_print_voucher_type2, #dkexpress_print_voucher').on("click", function (e) {
@@ -118,7 +166,7 @@
                 success: function (response) {
                                         $this.removeClass('disabled').removeClass('is-active');
                     if (response.success) {
-                        dkexpress_openPdf(response.data.Voucher, $this);
+                        dkexpress_openPdf(response.data.Voucher, $this, response.data.Filename);
                     } else {
                         alert(dkexpress_ajax_object.print_error_msg + (typeof response.data === 'string' && response.data ? '\n\n' + response.data : ''));
                     }
