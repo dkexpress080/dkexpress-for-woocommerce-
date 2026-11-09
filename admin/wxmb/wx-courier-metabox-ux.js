@@ -252,8 +252,12 @@
 			var open = $m.prop('hidden');
 			$('.wxmb .wxmb-menu').prop('hidden', true);
 			$('.wxmb .wxmb-caret, .wxmb .wxmb-kebab').attr('aria-expanded', 'false');
-			$m.prop('hidden', !open);
+			$m.removeClass('wxmb-menu-up').prop('hidden', !open);
 			$b.attr('aria-expanded', open ? 'true' : 'false');
+			// Not enough room below (bottom of the viewport): flip the menu upward.
+			if (open && $m[0].getBoundingClientRect().bottom > window.innerHeight - 8) {
+				$m.addClass('wxmb-menu-up');
+			}
 		})
 		.on('click', function (e) {
 			if (!$(e.target).closest('.wxmb-menu, .wxmb-caret, .wxmb-kebab').length) {

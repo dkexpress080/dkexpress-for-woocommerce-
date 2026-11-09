@@ -72,6 +72,8 @@
 .wxmb-split .wxmb-caret { flex: 0 0 32px; padding: 0 !important; border-top-left-radius: 0; border-bottom-left-radius: 0; margin-left: -1px; }
 .wxmb-menu { position: absolute; right: 0; top: calc(100% + 4px); z-index: 20; min-width: 160px; padding: 4px 0; background: #fff; border: 1px solid #c3c4c7; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,.12); }
 .wxmb-menu[hidden] { display: none; }
+/* Footer menus (⋯) sit on the box's last row: open upward so the postbox edge never clips them. */
+.wxmb-foot .wxmb-menu, .wxmb-menu.wxmb-menu-up { top: auto; bottom: calc(100% + 4px); }
 .wxmb-menu a { display: block; padding: 6px 12px; font-size: 12.5px; color: #1d2327; text-decoration: none; }
 .wxmb-menu a:hover { background: #f0f6fc; color: #0a4b78; }
 .wxmb-menu a.wxmb-reset { color: #b32d2e; }
@@ -162,3 +164,9 @@
 .wxmb-return .button-small { margin-left: auto; }
 .wxmb-return .wxmb-btn-inline { width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 6px; }
 .wxmb-return-note { color: #8c8f94; font-size: 11.5px; }
+
+/* Manage box (return + cancel), separate from print. Return button keeps its style, smaller. */
+.wxmb-group-manage { padding: 10px 12px; }
+.wxmb-group-manage > .wxmb-return { margin-top: 0; padding-top: 0; border-top: 0; }
+.wxmb-group-manage > .wxmb-foot:first-child { margin-top: 0; }
+.wxmb-group-manage .wxmb-return .wxmb-btn-inline { min-height: 28px; height: auto; padding: 0 10px; font-size: 12px; line-height: 26px; }

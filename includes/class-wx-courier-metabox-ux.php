@@ -943,6 +943,9 @@ class WX_Courier_Metabox_UX_1 {
 		<div class="wxmb-group">
 			<?php $this->print_controls( $order, 'delivered' !== $top ); ?>
 			<div class="wxmb-details"><?php echo esc_html( $this->details_line( $order ) ); ?></div>
+		</div>
+		<?php // Return + cancel live in their own box, away from print, so a second click after printing can't land on them. ?>
+		<div class="wxmb-group wxmb-group-manage">
 			<?php $this->return_block( $order, $st ); ?>
 			<div class="wxmb-foot">
 				<span class="wxmb-foot-right">
