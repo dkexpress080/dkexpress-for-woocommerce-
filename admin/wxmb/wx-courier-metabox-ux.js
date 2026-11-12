@@ -92,8 +92,33 @@
 		return resp && resp.data && resp.data.license_error === true;
 	}
 
+	/* Order form lock (shared, v1): while a voucher request runs, the order can't be saved.
+	   The form still holds the old Tracking number until refresh() syncs it, and an Update
+	   sent in that gap saves the stale value over the voucher. */
+	var pending = 0;
+	var SAVE = 'form#order .save_order, form#post .save_order, form#post #publish';
+	function lockForm(on) {
+		$(SAVE).each(function () {
+			var $b = $(this);
+			if (on) {
+				if (!$b.prop('disabled')) { $b.attr('data-wxmb-locked', '1').prop('disabled', true); }
+			} else if ($b.attr('data-wxmb-locked')) {
+				$b.removeAttr('data-wxmb-locked').prop('disabled', false);
+			}
+		});
+	}
+	$(document).on('submit', 'form#order, form#post', function (e) {
+		if (pending > 0) { e.preventDefault(); }
+	});
+
 	function post(data) {
-		return $.ajax({ type: 'post', url: ajaxUrl, data: data, dataType: 'json' });
+		pending++;
+		lockForm(true);
+		// Registered before the caller's handlers, so a done() that chains refresh() re-locks in the same tick.
+		return $.ajax({ type: 'post', url: ajaxUrl, data: data, dataType: 'json' }).always(function () {
+			pending = Math.max(0, pending - 1);
+			if (!pending) { lockForm(false); }
+		});
 	}
 
 	function refresh($root, c, message, type) {
