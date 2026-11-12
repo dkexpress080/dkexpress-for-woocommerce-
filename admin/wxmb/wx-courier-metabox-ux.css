@@ -72,6 +72,7 @@
 .wxmb-split .wxmb-caret { flex: 0 0 32px; padding: 0 !important; border-top-left-radius: 0; border-bottom-left-radius: 0; margin-left: -1px; }
 .wxmb-menu { position: absolute; right: 0; top: calc(100% + 4px); z-index: 20; min-width: 160px; padding: 4px 0; background: #fff; border: 1px solid #c3c4c7; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,.12); }
 .wxmb-menu[hidden] { display: none; }
+.wxmb-menu { overflow-y: auto; overscroll-behavior: contain; }
 /* Footer menus (⋯) sit on the box's last row: open upward so the postbox edge never clips them. */
 .wxmb-foot .wxmb-menu, .wxmb-menu.wxmb-menu-up { top: auto; bottom: calc(100% + 4px); }
 .wxmb-menu a { display: block; padding: 6px 12px; font-size: 12.5px; color: #1d2327; text-decoration: none; }

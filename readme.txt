@@ -5,7 +5,7 @@ Requires at least: 5.8
 Tested up to: 6.9.4
 WC tested up to: 10.7.0
 Requires PHP: 7.4
-Stable tag: 1.0.16
+Stable tag: 1.0.17
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -46,6 +46,9 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 * `[dkexpress_track_checkpoints order_id="123"]` — ιστορικό σταδίων αποστολής
 
 == Changelog ==
+= 1.0.17 =
+* Διόρθωση: Το μενού τύπου εκτύπωσης δεν κόβεται πλέον στο κάτω μέρος του πλαισίου
+
 = 1.0.16 =
 * Βελτίωση: Η «Ενημέρωση» της παραγγελίας περιμένει να ολοκληρωθεί η έκδοση του voucher
 

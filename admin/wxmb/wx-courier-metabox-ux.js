@@ -277,11 +277,30 @@
 			var open = $m.prop('hidden');
 			$('.wxmb .wxmb-menu').prop('hidden', true);
 			$('.wxmb .wxmb-caret, .wxmb .wxmb-kebab').attr('aria-expanded', 'false');
-			$m.removeClass('wxmb-menu-up').prop('hidden', !open);
+			$m.removeClass('wxmb-menu-up').css('max-height', '').prop('hidden', !open);
 			$b.attr('aria-expanded', open ? 'true' : 'false');
-			// Not enough room below (bottom of the viewport): flip the menu upward.
-			if (open && $m[0].getBoundingClientRect().bottom > window.innerHeight - 8) {
-				$m.addClass('wxmb-menu-up');
+			if (!open) { return; }
+			// Room is bounded by the viewport AND by any clipping ancestor
+			// (postbox / sidebar with overflow), not just the viewport — else
+			// long menus (e.g. 8 print sizes) get cut off at the box edge.
+			var lo = 0, hi = window.innerHeight;
+			$m.parents().each(function () {
+				if (this === document.body || this === document.documentElement) { return false; }
+				var s = window.getComputedStyle(this);
+				if (/(hidden|auto|scroll|clip)/.test(s.overflow + s.overflowX + s.overflowY)) {
+					var r = this.getBoundingClientRect();
+					lo = Math.max(lo, r.top); hi = Math.min(hi, r.bottom);
+				}
+			});
+			var mr = $m[0].getBoundingClientRect(), br = $b[0].getBoundingClientRect();
+			var below = hi - br.bottom - 12, above = br.top - lo - 12;
+			var up = $m.closest('.wxmb-foot').length > 0; // foot menus always open upward (CSS)
+			if (!up && mr.height > below && above > below) {
+				$m.addClass('wxmb-menu-up'); up = true;
+			}
+			var room = up ? above : below;
+			if (mr.height > room) {
+				$m.css('max-height', Math.max(room, 120) + 'px');
 			}
 		})
 		.on('click', function (e) {
